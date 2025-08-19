@@ -1,5 +1,18 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import ErrorAlert from "@/components/alerts/error";
+import HomeLogoutAppBar from "@/components/appbar/HomeLogoutAppBar";
+import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
+import { useDispatch, useSelector } from "react-redux";
+import { updatePageLoading } from "@/store/slices/userSlice";
+import { AppDispatch, RootState } from "@/store";
+import { Typography, Box, Card, CardContent, IconButton } from "@mui/material";
+import Head from "next/head";
+import Layout from "@/components/layout";
+import HomePageStepper from "@/components/stepper/HomePageStepper";
+import { Cancel } from "@mui/icons-material";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,104 +25,167 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+  const [showVideo, setShowVideo] = useState("block");
+  const [muted, setMuted] = useState(false);
+  const dispatch = useDispatch<AppDispatch>();
+  const { pageLoading } = useSelector((state: RootState) => state.users);
+  useEffect(() => {
+    if (pageLoading) {
+      dispatch(updatePageLoading(false));
+    }
+  }, [dispatch, pageLoading]);
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Layout>
+      <Head>
+        <title>RENTALS - Home</title>
+        <link rel="icon" href="smnk.jpg" type="image/x-icon" />
+      </Head>
+      <main>
+        <HomePageStepper />
+        
+        <Box
+          bgcolor={"black"}
+          height={{ xs: 200, md: 300 }}
+          width={{ xs: 200, md: 300 }}
+          position={"fixed"}
+          top={400}
+          left={0}
+          display={showVideo}
+          zIndex={100}
+        >
+          <IconButton
+            sx={{ color: "white" }}
+            onClick={() => {
+              setShowVideo("none");
+              setMuted(true);
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Cancel/>
+          </IconButton>
+          <video
+            width="100%"
+            height="100%"
+            muted={muted}
+            // autoPlay={true}
+            loop
+            controls
+            style={{ objectFit: "fill" }}
           >
-            Read our docs
-          </a>
-        </div>
+            <source src="/assets/rental_vid.mp4" type="video/mp4" />
+            <source src="/assets/rental_vid.mp4" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
+        </Box>
+
+        {/* <*/}
+
+ 
+        <Box
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"flex-start"}
+          overflow={"scroll"}
+          p={1}
+          mb={5}
+        >
+          <Card
+            sx={{
+              bgcolor: "#2266BF",
+              color: "white",
+              minHeight: 250,
+              minWidth: { xs: 300, md: 400, lg: 500 },
+              maxWidth: { xs: 300, md: 400, lg: 500 },
+              mr: 2,
+              mb: 5,
+            }}
+          >
+            <CardContent>
+              <Typography variant="h6">How service fees are charged</Typography>
+              <Typography>
+                Each job comes with a fee, however the amount depends on how
+                much money you would make from a customer. A 12% administrative
+                cost fee would be applied to all skilled personnel.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card
+            sx={{
+              bgcolor: "green",
+              color: "white",
+              minHeight: 250,
+              minWidth: { xs: 300, md: 400, lg: 500 },
+              maxWidth: { xs: 300, md: 400, lg: 500 },
+              mr: 2,
+              mb: 5,
+            }}
+          >
+            <CardContent>
+              <Typography variant="h6">
+                How your ranking impacts your success of landing jobs
+              </Typography>
+              <Typography>
+                After completing each job, your review gauges how happy your
+                clients are with your job. Your work rating affects how
+                well-liked and trusted you are among clients.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card
+            sx={{
+              bgcolor: "#7E1120",
+              color: "white",
+              minHeight: 250,
+              minWidth: { xs: 300, md: 400, lg: 500 },
+              maxWidth: { xs: 300, md: 400, lg: 500 },
+              mb: 5,
+            }}
+          >
+            <CardContent>
+              <Typography variant="h6">Improvement suggestions</Typography>
+              <Typography>
+                Before submitting your work, make sure you often review it to
+                ensure it is error-free. Before you start, take some time to go
+                through what your clients want you to deliver.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+
+       
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </Layout>
   );
 }
+
+
+
+
+
+
+
+const PlayerComponent = () => {
+  const [fullscreenMode, setFullscreenMode] = useState(false);
+  let player: any;
+  const ref = (p: any) => {
+    player = p;
+  };
+
+  const onStart = () => {
+    setFullscreenMode(true);
+  };
+
+  const onEnded = () => {
+    setFullscreenMode(document.fullscreenElement !== null);
+  };
+
+  return (
+    <ReactPlayer
+      ref={ref}
+      url="/assets/rental_vid.mp4"
+      onStart={onStart}
+      onEnded={onEnded}
+      playing
+      loop
+    />
+  );
+};

@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","src/pages/otp.jsx", "src/account/classes/otp.js", "src/account/components/passwordHide", "src/pages/account/[id].js", "src/pages/api/multer/profile-pic/[dpFileName].ts"],
   "exclude": ["node_modules"]
 }

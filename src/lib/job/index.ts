@@ -23,7 +23,7 @@ export const deleteJob = async (jobId:string)=>{
         if(jobId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/job/delete`,
+                    url:`${process.env.RENTALS_URL}api/job/delete`,
                     data:{jobId}
                 })
                 const data = await res.data
@@ -44,7 +44,7 @@ export const deleteJob = async (jobId:string)=>{
         if(jobId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/job/cancel`,
+                    url:`${process.env.RENTALS_URL}api/job/cancel`,
                     data:{jobId}
                 })
                 const data = await res.data
@@ -68,7 +68,7 @@ export const deleteJob = async (jobId:string)=>{
       if (jobId) {
         const res = await axios({
           method: "GET",
-          url: `${process.env.SMNK_URL}api/job/${jobId}`,
+          url: `${process.env.RENTALS_URL}api/job/${jobId}`,
         });
         const data = await res.data;
         //console.log(data)

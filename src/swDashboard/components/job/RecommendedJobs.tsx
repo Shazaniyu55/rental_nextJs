@@ -26,7 +26,7 @@ function RecommendedJobs() {
         if (_id) {
           const res = await axios({
             method: "POST",
-            url: `${process.env.SMNK_URL}api/sw-dashboard/jobs/recommended-jobs`,
+            url: `${process.env.RENTALS_URL}api/sw-dashboard/jobs/recommended-jobs`,
             data: { _id },
           });
           const data = await res.data;

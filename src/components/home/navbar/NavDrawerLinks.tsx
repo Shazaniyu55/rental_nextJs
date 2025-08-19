@@ -52,7 +52,7 @@ export default function NavDrawerLinks() {
           }}
         >
           <ListItemIcon>
-            <HomeIcon sx={{ color: theme.smnk[1000] }} />
+            <HomeIcon sx={{ color: theme.rent[1000] }} />
           </ListItemIcon>
           <ListItemText
             primary={
@@ -70,7 +70,7 @@ export default function NavDrawerLinks() {
           }}
         >
           <ListItemIcon>
-            <InfoIcon sx={{ color: theme.smnk[1000] }} />
+            <InfoIcon sx={{ color: theme.rent[1000] }} />
           </ListItemIcon>
           <ListItemText
             primary={
@@ -95,7 +95,7 @@ export default function NavDrawerLinks() {
               }}
             >
               <ListItemIcon>
-                <FeedIcon sx={{ color: theme.smnk[1000] }} />
+                <FeedIcon sx={{ color: theme.rent[1000] }} />
               </ListItemIcon>
               <ListItemText
                 primary={
@@ -113,7 +113,7 @@ export default function NavDrawerLinks() {
               }}
             >
               <ListItemIcon>
-                <RemoveRedEyeIcon sx={{ color: theme.smnk[1000] }} />
+                <RemoveRedEyeIcon sx={{ color: theme.rent[1000] }} />
               </ListItemIcon>
               <ListItemText
                 primary={
@@ -131,7 +131,7 @@ export default function NavDrawerLinks() {
               }}
             >
               <ListItemIcon>
-                <ConfirmationNumberIcon sx={{ color: theme.smnk[1000] }} />
+                <ConfirmationNumberIcon sx={{ color: theme.rent[1000] }} />
               </ListItemIcon>
               <ListItemText
                 primary={
@@ -149,7 +149,7 @@ export default function NavDrawerLinks() {
               }}
             >
               <ListItemIcon>
-                <ConfirmationNumberIcon sx={{ color: theme.smnk[1000] }} />
+                <ConfirmationNumberIcon sx={{ color: theme.rent[1000] }} />
               </ListItemIcon>
               <ListItemText
                 primary={
@@ -167,7 +167,7 @@ export default function NavDrawerLinks() {
               }}
             >
               <ListItemIcon>
-                <Diversity3Icon sx={{ color: theme.smnk[1000] }} />
+                <Diversity3Icon sx={{ color: theme.rent[1000] }} />
               </ListItemIcon>
               <ListItemText
                 primary={
@@ -190,7 +190,7 @@ export default function NavDrawerLinks() {
           }}
         >
           <ListItemIcon>
-            <BusinessIcon sx={{ color: theme.smnk[1000] }} />
+            <BusinessIcon sx={{ color: theme.rent[1000] }} />
           </ListItemIcon>
           <ListItemText
             primary={
@@ -208,7 +208,7 @@ export default function NavDrawerLinks() {
           }}
         >
           <ListItemIcon>
-            <WorkIcon sx={{ color: theme.smnk[1000] }} />
+            <WorkIcon sx={{ color: theme.rent[1000] }} />
           </ListItemIcon>
           <ListItemText
             primary={

@@ -26,7 +26,7 @@ function DashBoardNotification() {
       try {
         const res = await axios({
           method: "GET",
-          url: `${process.env.SMNK_URL}api/a-dashboard/notification/${_id}`,
+          url: `${process.env.RENTALS_URL}api/a-dashboard/notification/${_id}`,
         });
         const data = await res.data;
         setNotifications(data);
@@ -39,14 +39,14 @@ function DashBoardNotification() {
   return (
     <>
       <IconButton
-        sx={{ color: theme.smnk[1000] }}
+        sx={{ color: theme.rent[1000] }}
         onClick={async () => {
           const notIds = notifications && notifications.map((not) => not._id);
 
           try {
             const res = await axios({
               method: "POST",
-              url: `${process.env.SMNK_URL}api/a-dashboard/notification/read`,
+              url: `${process.env.RENTALS_URL}api/a-dashboard/notification/read`,
               data: { notIds, userId: _id },
             });
           } catch (err: any) {

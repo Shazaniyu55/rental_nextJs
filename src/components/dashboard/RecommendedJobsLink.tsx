@@ -22,7 +22,7 @@ function RecommendedJobsLink() {
         if (user._id) {
           const res = await axios({
             method: "POST",
-            url: `${process.env.SMNK_URL}api/users/proposal/jobs/is-sw-on-a-job`,
+            url: `${process.env.RENTALS_URL}api/users/proposal/jobs/is-sw-on-a-job`,
             data: { userId: user._id },
           });
           const data = await res.data;
@@ -43,7 +43,7 @@ function RecommendedJobsLink() {
       }}
     >
       <ListItemIcon>
-        <RecommendIcon sx={{ color: theme.smnk[1000] }} />
+        <RecommendIcon sx={{ color: theme.rent[1000] }} />
       </ListItemIcon>
       <ListItemText
         primary={<Typography variant="body2">Recommended Jobs</Typography>}

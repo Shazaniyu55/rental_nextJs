@@ -10,7 +10,7 @@ import axios from "axios"
     try{
         const res = await axios({
               method:'POST',
-              url:`${process.env.SMNK_URL}${url}`,
+              url:`${process.env.RENTALS_URL}${url}`,
               data:values
           })
         const data = await res.data

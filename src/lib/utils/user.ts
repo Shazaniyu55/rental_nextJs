@@ -8,7 +8,7 @@ export const getUserInfo = async (userId: string) => {
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/personal-info/${userId}`,
+        url: `${process.env.RENTALS_URL}api/personal-info/${userId}`,
       });
       data = await res.data;
     } catch (err: any) {
@@ -27,7 +27,7 @@ export const isUserVerified = async (userId: string) => {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/personal-info/verified`,
+        url: `${process.env.RENTALS_URL}api/personal-info/verified`,
         data:{userId}
       });
       data = await res.data;
@@ -47,7 +47,7 @@ export const getUserverification = async (userId: string) => {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/personal-info/verification`,
+        url: `${process.env.RENTALS_URL}api/personal-info/verification`,
         data:{userId}
       });
       data = await res.data;
@@ -67,7 +67,7 @@ export const getSWExtraDetails = async (userId: string) => {
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/sw/extra/${userId}`,
+        url: `${process.env.RENTALS_URL}api/sw/extra/${userId}`,
       });
       data = await res.data;
     } catch (err: any) {
@@ -84,7 +84,7 @@ export const getUserDp =  async(userId: string) => {
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/users/dp/${userId}`,
+        url: `${process.env.RENTALS_URL}api/users/dp/${userId}`,
       });
       const data = await res.data;
       return data;
@@ -100,7 +100,7 @@ export const getUserName =  async(userId: string) => {
   try {
     const res = await axios({
       method: "GET",
-      url: `${process.env.SMNK_URL}api/profile/name/${userId}`,
+      url: `${process.env.RENTALS_URL}api/profile/name/${userId}`,
     });
     const data = await res.data;
     return data;
@@ -118,7 +118,7 @@ export const getUserProfile = async (userId: string) => {
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/profile/${userId}`,
+        url: `${process.env.RENTALS_URL}api/profile/${userId}`,
       });
       data = await res.data;
     } catch (err: any) {
@@ -137,7 +137,7 @@ export const getUserRating = async (userId: string) => {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/users/rating`,
+        url: `${process.env.RENTALS_URL}api/users/rating`,
         data:{userId}
       });
       data = await res.data;
@@ -157,7 +157,7 @@ export const getJobsDoneByUser = async (userId: string) => {
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/job/done/${userId}`,
+        url: `${process.env.RENTALS_URL}api/job/done/${userId}`,
       });
       data = await res.data;
     } catch (err: any) {
@@ -176,7 +176,7 @@ export const getClientJobHistory = async (userId: string) => {
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/job/client/${userId}`,
+        url: `${process.env.RENTALS_URL}api/job/client/${userId}`,
       });
       data = await res.data;
     } catch (err: any) {
@@ -192,7 +192,7 @@ export const getCompanyProfile = (userId: string) => {
   const res = async () => {
     try {
       const res = await axios(
-        `${process.env.SMNK_URL}api/company-profile/${userId}`
+        `${process.env.RENTALS_URL}api/company-profile/${userId}`
       );
       const data = await res.data;
       return data;
@@ -211,7 +211,7 @@ export const getUserExp = async (userId: string) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/sw-dashboard/experience/${userId}`,
+      url: `${process.env.RENTALS_URL}api/sw-dashboard/experience/${userId}`,
     });
     data = await res.data;
   } catch (err: any) {
@@ -226,7 +226,7 @@ export const getUserServices = async (userId: string) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/sw-dashboard/service/${userId}`,
+      url: `${process.env.RENTALS_URL}api/sw-dashboard/service/${userId}`,
     });
     data = await res.data;
   } catch (err: any) {
@@ -239,7 +239,7 @@ export const getUserBankDetails = (userId: string) => {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/sw-dashboard/bank-details/${userId}`,
+        url: `${process.env.RENTALS_URL}api/sw-dashboard/bank-details/${userId}`,
       });
       const data = await res.data;
       return data;

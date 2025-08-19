@@ -41,7 +41,7 @@ function ProfilePicUploader() {
 
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}/api/multer/profile-pic`,
+          url: `${process.env.RENTALS_URL}/api/multer/profile-pic`,
           data: formData,
         });
         const data = await res.data;
@@ -98,7 +98,7 @@ function ProfilePicUploader() {
             accept="image"
             type="file"
           />
-          {!file && <AddAPhotoIcon sx={{ color: theme.smnk[1200] }} />}
+          {!file && <AddAPhotoIcon sx={{ color: theme.rent[1200] }} />}
         </IconButton>
       </form>
     </SmnkErrorBoundary>

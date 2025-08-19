@@ -35,7 +35,7 @@ export const jobPaymentSubmitHandler = async (values:JobPaymentDetails,router:an
         if(values.jobId && values.userId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/payment/job/pay-for-job`,
+                    url:`${process.env.RENTALS_URL}api/payment/job/pay-for-job`,
                     data:values
                 })
                 const data = await res.data
@@ -60,7 +60,7 @@ export const jobPaymentSubmitHandler = async (values:JobPaymentDetails,router:an
         if(values.packageName && values.userId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/payment/upgrade/pay-for-upgrade`,
+                    url:`${process.env.RENTALS_URL}api/payment/upgrade/pay-for-upgrade`,
                     data:values
                 })
                 const data = await res.data
@@ -84,7 +84,7 @@ export const getAllPayments = ()=>{
       try{
               const res = await axios({
                   method:'GET',
-                  url:`${process.env.SMNK_URL}api/payment`,
+                  url:`${process.env.RENTALS_URL}api/payment`,
               })
               const data = await res.data
           //console.log(data)
@@ -103,7 +103,7 @@ export const confirmJobPayment = async(jobId:string)=>{
       if(jobId){
           const res = await axios({
               method:'POST',
-              url:`${process.env.SMNK_URL}api/payment/job/confirm-payment`,
+              url:`${process.env.RENTALS_URL}api/payment/job/confirm-payment`,
               data:{jobId}
           })
           const data = await res.data
@@ -129,7 +129,7 @@ export const confirmUpgradePayment = async(userId:string)=>{
       if(userId){
           const res = await axios({
               method:'POST',
-              url:`${process.env.SMNK_URL}api/payment/upgrade/confirm-payment`,
+              url:`${process.env.RENTALS_URL}api/payment/upgrade/confirm-payment`,
               data:{userId,subscribedDate,expiringDate}
           })
           const data = await res.data
@@ -150,7 +150,7 @@ try{
     if(userId){
         const res = await axios({
             method:'POST',
-            url:`${process.env.SMNK_URL}api/a-dashboard/verify-user`,
+            url:`${process.env.RENTALS_URL}api/a-dashboard/verify-user`,
             data:{userId}
         })
         const data = await res.data
@@ -171,7 +171,7 @@ try{
     if(userId){
         const res = await axios({
             method:'POST',
-            url:`${process.env.SMNK_URL}api/sw/sub`,
+            url:`${process.env.RENTALS_URL}api/sw/sub`,
             data:{userId}
         })
         const data = await res.data
@@ -200,7 +200,7 @@ export const confirmPayment = async(jobId:string)=>{
         if(jobId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/job/confirm-payment`,
+                    url:`${process.env.RENTALS_URL}api/job/confirm-payment`,
                     data:{jobId}
                 })
                 const data = await res.data
@@ -224,7 +224,7 @@ export const confirmSWPaid = async(jobId:string)=>{
         if(jobId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/job/confirm-sw-paid`,
+                    url:`${process.env.RENTALS_URL}api/job/confirm-sw-paid`,
                     data:{jobId}
                 })
                 const data = await res.data

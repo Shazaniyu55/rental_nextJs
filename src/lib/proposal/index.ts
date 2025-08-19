@@ -6,7 +6,7 @@ export const getProposalsByUserId = (id:string)=>{
             if(id){
                 const res = await axios({
                     method:'GET',
-                    url:`${process.env.SMNK_URL}api/users/proposal/users/${id}`,
+                    url:`${process.env.RENTALS_URL}api/users/proposal/users/${id}`,
                 })
                 const data = await res.data
             //console.log(data)
@@ -31,7 +31,7 @@ export const getProposalsByUserId = (id:string)=>{
             if(id){
                 const res = await axios({
                     method:'GET',
-                    url:`${process.env.SMNK_URL}api/users/proposal/jobs/${id}`,
+                    url:`${process.env.RENTALS_URL}api/users/proposal/jobs/${id}`,
                 })
                 const data = await res.data
             //console.log(data)
@@ -56,7 +56,7 @@ export const getProposalsByUserId = (id:string)=>{
             if(jobId && userId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/users/proposal/jobs/has-applied`,
+                    url:`${process.env.RENTALS_URL}api/users/proposal/jobs/has-applied`,
                     data:{jobId,userId}
                 })
                 const data = await res.data
@@ -81,7 +81,7 @@ export const getProposalsByUserId = (id:string)=>{
                 if(propId){
                         const res = await axios({
                             method:'POST',
-                            url:`${process.env.SMNK_URL}api/users/proposal/jobs/accept`,
+                            url:`${process.env.RENTALS_URL}api/users/proposal/jobs/accept`,
                             data:{propId,swId,jobId}
                         })
                         const data = await res.data
@@ -103,7 +103,7 @@ export const getProposalsByUserId = (id:string)=>{
           if(propId){
                   const res = await axios({
                       method:'POST',
-                      url:`${process.env.SMNK_URL}api/users/proposal/jobs/reject`,
+                      url:`${process.env.RENTALS_URL}api/users/proposal/jobs/reject`,
                       data:{propId,jobId}
                   })
                   const data = await res.data
@@ -126,7 +126,7 @@ export const getProposalsByUserId = (id:string)=>{
             if(jobId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/users/proposal/jobs/is-proposal-accepted-for-job`,
+                    url:`${process.env.RENTALS_URL}api/users/proposal/jobs/is-proposal-accepted-for-job`,
                     data:{jobId}
                 })
                 const data = await res.data
@@ -148,7 +148,7 @@ export const getProposalsByUserId = (id:string)=>{
         if(jobId){
             const res = await axios({
                 method:'POST',
-                url:`${process.env.SMNK_URL}api/users/proposal/jobs/is-job-paid-for`,
+                url:`${process.env.RENTALS_URL}api/users/proposal/jobs/is-job-paid-for`,
                 data:{jobId}
             })
             const data = await res.data
@@ -170,7 +170,7 @@ export const isJobApproved = async(jobId:string)=>{
       if(jobId){
           const res = await axios({
               method:'POST',
-              url:`${process.env.SMNK_URL}api/job/is-job-approved`,
+              url:`${process.env.RENTALS_URL}api/job/is-job-approved`,
               data:{jobId}
           })
           const data = await res.data
@@ -192,7 +192,7 @@ export const isJobRated = async(jobId:string)=>{
       if(jobId){
           const res = await axios({
               method:'POST',
-              url:`${process.env.SMNK_URL}api/rating/is-job-rated`,
+              url:`${process.env.RENTALS_URL}api/rating/is-job-rated`,
               data:{jobId}
           })
           const data = await res.data

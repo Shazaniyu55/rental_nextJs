@@ -39,7 +39,7 @@ export default function SWJobDetailsActions({ jobId }: { jobId: string }) {
       try {
         await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/job/decline`,
+          url: `${process.env.RENTALS_URL}api/job/decline`,
           data: { jobId },
         });
         router.reload();
@@ -53,7 +53,7 @@ export default function SWJobDetailsActions({ jobId }: { jobId: string }) {
       try {
         await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/job/commence`,
+          url: `${process.env.RENTALS_URL}api/job/commence`,
           data: { jobId },
         });
         router.reload();

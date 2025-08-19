@@ -30,7 +30,7 @@ export default function ChangePassword() {
 
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   useEffect(() => {
     if (response) {

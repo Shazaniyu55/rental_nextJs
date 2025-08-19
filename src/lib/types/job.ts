@@ -42,7 +42,7 @@ export const getUserReportsForJob = (jobId:string)=>{
       try{
           const res = await axios({
                 method:'POST',
-                url:`${process.env.SMNK_URL}api/c-dashboard/job/report`,
+                url:`${process.env.RENTALS_URL}api/c-dashboard/job/report`,
                 data:{jobId}
             })
           const data = await res.data
@@ -61,7 +61,7 @@ export const getPendingJobsByClientId = (userId:string)=>{
       try{
           const res = await axios({
                 method:'POST',
-                url:`${process.env.SMNK_URL}api/c-dashboard/job/pending`,
+                url:`${process.env.RENTALS_URL}api/c-dashboard/job/pending`,
                 data:{userId}
             })
           const data = await res.data
@@ -79,7 +79,7 @@ export const getJobsInProgressByClientId = (userId:string)=>{
       try{
           const res = await axios({
                 method:'POST',
-                url:`${process.env.SMNK_URL}api/c-dashboard/job/jobs-in-progress`,
+                url:`${process.env.RENTALS_URL}api/c-dashboard/job/jobs-in-progress`,
                 data:{userId}
             })
           const data = await res.data
@@ -97,7 +97,7 @@ export const getJobsByClientId = (userId:string)=>{
       try{
           const res = await axios({
                 method:'GET',
-                url:`${process.env.SMNK_URL}api/c-dashboard/job/${userId}`
+                url:`${process.env.RENTALS_URL}api/c-dashboard/job/${userId}`
             })
           const data = await res.data
          return data
@@ -117,7 +117,7 @@ export const getJobByJobId = (id:string)=>{
         if(id){
           const res = await axios({
             method:'POST',
-            url:`${process.env.SMNK_URL}api/c-dashboard/job/job-by-id`,
+            url:`${process.env.RENTALS_URL}api/c-dashboard/job/job-by-id`,
             data:{id}
         })
           const data = await res.data
@@ -139,7 +139,7 @@ export const getAllJobs = ()=>{
       try{
           const res = await axios({
                 method:'GET',
-                url:`${process.env.SMNK_URL}api/a-dashboard/jobs`
+                url:`${process.env.RENTALS_URL}api/a-dashboard/jobs`
             })
           const data = await res.data
          return data
@@ -156,7 +156,7 @@ export const getAllpendingWithrawalRequests = ()=>{
       try{
           const res = await axios({
                 method:'GET',
-                url:`${process.env.SMNK_URL}api/a-dashboard/withdrawal/pending`
+                url:`${process.env.RENTALS_URL}api/a-dashboard/withdrawal/pending`
             })
           const data = await res.data
          return data
@@ -173,7 +173,7 @@ export const getCountOfPendingRequest = ()=>{
       try{
           const res = await axios({
                 method:'GET',
-                url:`${process.env.SMNK_URL}api/a-dashboard/withdrawal/count`
+                url:`${process.env.RENTALS_URL}api/a-dashboard/withdrawal/count`
             })
           const data = await res.data
          return data
@@ -191,7 +191,7 @@ export const getRecommendedSkilledWorkersInfo = (id:string)=>{
         if(id){
           const res = await axios({
             method:'POST',
-            url:`${process.env.SMNK_URL}api/a-dashboard/jobs/recommended-skilled-workers-for-job`,
+            url:`${process.env.RENTALS_URL}api/a-dashboard/jobs/recommended-skilled-workers-for-job`,
             data:{id}
         })
           const data = await res.data
@@ -215,7 +215,7 @@ export const getRecommendedJobs = (id:string)=>{
         if(id){
           const res = await axios({
             method:'POST',
-            url:`${process.env.SMNK_URL}api/sw-dashboard/jobs/recommended-jobs`,
+            url:`${process.env.RENTALS_URL}api/sw-dashboard/jobs/recommended-jobs`,
             data:{id}
         })
           const data = await res.data

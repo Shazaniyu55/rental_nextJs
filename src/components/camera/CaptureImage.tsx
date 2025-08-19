@@ -60,7 +60,7 @@ export default function CaptureCameraImage() {
       if (url) {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}/api/multer/capture/camera-photo`,
+          url: `${process.env.RENTALS_URL}/api/multer/capture/camera-photo`,
           data: { userId: _id, capturedPhotoUrl: url },
         });
         const data = await res.data;

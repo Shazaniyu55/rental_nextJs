@@ -74,7 +74,7 @@ function VerifyingEmail({
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/users/email-in-use/${email}`,
+        url: `${process.env.RENTALS_URL}api/users/email-in-use/${email}`,
       });
       data = await res.data;
     } catch (err: any) {

@@ -43,7 +43,7 @@ function SendBox({
       try {
         await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}/api/chat`,
+          url: `${process.env.RENTALS_URL}/api/chat`,
           data: { senderId, receiverId, chat },
         });
       } catch (err) {

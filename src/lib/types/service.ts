@@ -59,7 +59,7 @@ export const serviceSubmitHandler = async (
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/sw-dashboard/service/edit-service`,
+      url: `${process.env.RENTALS_URL}api/sw-dashboard/service/edit-service`,
       data: { userId: _id, services: swExtra.services },
     });
     const data = await res.data;

@@ -29,7 +29,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch<AppDispatch>();
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   //login submit handler
   const submitHandler = async (values: { email: string; password: string }) => {
@@ -59,7 +59,7 @@ export default function Login() {
     }
     if (user._id) {
       switch (true) {
-        case user.type === "Agent":
+        case user.type === "agent":
           dispatch(getSWExtra(user._id));
           router.push("/sw-dashboard");
           break;

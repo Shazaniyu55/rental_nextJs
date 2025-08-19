@@ -51,7 +51,7 @@ export default function EditIndividualInfoForm() {
       try {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/personal-info/edit-personal-info`,
+          url: `${process.env.RENTALS_URL}api/personal-info/edit-personal-info`,
           data: values,
         });
         const data = await res.data;

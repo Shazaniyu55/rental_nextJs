@@ -71,7 +71,7 @@ export default function EditExperienceForm({
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/sw-dashboard/experience/edit-experience`,
+        url: `${process.env.RENTALS_URL}api/sw-dashboard/experience/edit-experience`,
         data: { experience: swExtra.experience, userId: _id },
       });
       const data = await res.data;

@@ -4,7 +4,7 @@ import { RootState } from "@/store";
 import useSWR from "swr";
 import { getJobsByClientId } from "@/lib/types/job";
 import { useRouter } from "next/router";
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import LoadingAlert from "@/components/alerts/Loading";
 import InfoAlert from "@/components/alerts/Info";
 import AddBottomNavigation from "@/components/bottomNavigation/AddBottomNavigation";

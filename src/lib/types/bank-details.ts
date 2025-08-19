@@ -30,7 +30,7 @@ export const bankDetailsSubmitHandler = async (
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/sw-dashboard/bank-details/edit-bank-details`,
+      url: `${process.env.RENTALS_URL}api/sw-dashboard/bank-details/edit-bank-details`,
       data: {bankDetails:swExtra.bankDetails,userId}
     });
     const data = await res.data;

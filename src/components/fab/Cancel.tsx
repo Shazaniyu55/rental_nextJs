@@ -11,7 +11,7 @@ export default function CancelFloatingActionButtons({
 }) {
   return (
     <IconButton onClick={handleClick}>
-      <Fab sx={{ color: theme.smnk[1000] }} aria-label="add" size="small">
+      <Fab sx={{ color: theme.rent[1000] }} aria-label="add" size="small">
         <CancelIcon />
       </Fab>
     </IconButton>

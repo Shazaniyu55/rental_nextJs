@@ -6,7 +6,7 @@ export const getUser = async(userId:string)=>{
       if(userId){
           const res = await axios({
               method:'POST',
-              url:`${process.env.SMNK_URL}api/users/userinfo`,
+              url:`${process.env.RENTALS_URL}api/users/userinfo`,
               data:{userId}
           })
           const data = await res.data
@@ -27,7 +27,7 @@ export const getUserSub = async(userId:string)=>{
         if(userId){
             const res = await axios({
                 method:'POST',
-                url:`${process.env.SMNK_URL}api/users/sub`,
+                url:`${process.env.RENTALS_URL}api/users/sub`,
                 data:{userId}
             })
             const data = await res.data

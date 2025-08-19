@@ -29,7 +29,7 @@ function VerifyingPhone({
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/users/phone-in-use/${phone}`,
+        url: `${process.env.RENTALS_URL}api/users/phone-in-use/${phone}`,
       });
       data = await res.data;
     } catch (err: any) {

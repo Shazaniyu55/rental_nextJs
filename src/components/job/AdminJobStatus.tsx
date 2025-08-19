@@ -30,7 +30,7 @@ export const getJobStatus = async (
     if (jobId) {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/job/get-job-status`,
+        url: `${process.env.RENTALS_URL}api/job/get-job-status`,
         data: { jobId, userId },
       });
       const data = await res.data;
@@ -50,7 +50,7 @@ export const getJobComments = async (
     if (userId) {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/job/comments/${userId}`,
+        url: `${process.env.RENTALS_URL}api/job/comments/${userId}`,
       });
       const data = await res.data;
       //console.log(data)

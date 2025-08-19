@@ -11,7 +11,7 @@ import axios from "axios";
 import SnackbarComponent from "../snackbar/SnackBar";
 import { useRef, useState } from "react";
 import { AlertColor } from "@mui/material";
-import ErrorAlert from "../alerts/Error";
+import ErrorAlert from "../alerts/error";
 import LoadingAlert from "../alerts/Loading";
 
 export default function EditCompanyProfileForm({ router }: { router: any }) {
@@ -34,7 +34,7 @@ export default function EditCompanyProfileForm({ router }: { router: any }) {
       try {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/company-profile/edit-company-profile`,
+          url: `${process.env.RENTALS_URL}api/company-profile/edit-company-profile`,
           data: values,
         });
         const data = await res.data;

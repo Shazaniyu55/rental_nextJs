@@ -46,7 +46,7 @@ function AddFile() {
 
                 const res = await axios({
                   method: "POST",
-                  url: `${process.env.SMNK_URL}/api/multer/catalog`,
+                  url: `${process.env.RENTALS_URL}/api/multer/catalog`,
                   data: formData,
                 });
                 const data = await res.data;
@@ -229,7 +229,7 @@ export async function deleteImageFromCatalog(index: number, userId: string) {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}/api/multer/catalog/delete`,
+      url: `${process.env.RENTALS_URL}/api/multer/catalog/delete`,
       data: { catalog, userId },
     });
     data = await res.data;

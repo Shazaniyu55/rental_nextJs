@@ -1,4 +1,3 @@
-import { JsxElement } from "typescript";
 
 export const states = [
   {

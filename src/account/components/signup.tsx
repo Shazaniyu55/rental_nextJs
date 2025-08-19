@@ -56,7 +56,7 @@ export default function SignUp() {
 
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   const [initialValues, setInitiaValues] = useState<signUpDetails>(
     getSignUpDetails() ?? {

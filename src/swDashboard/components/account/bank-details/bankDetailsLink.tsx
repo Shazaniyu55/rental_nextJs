@@ -23,7 +23,7 @@ export default function BankDetailsLink() {
       >
         {" "}
         <ListItemIcon>
-          <AddCardIcon sx={{ color: theme.smnk[1000] }} />
+          <AddCardIcon sx={{ color: theme.rent[1000] }} />
         </ListItemIcon>
         <ListItemText
           primary={<MenuLink label="Add Bank Details" pending={true} />}
@@ -40,7 +40,7 @@ export default function BankDetailsLink() {
     >
       {" "}
       <ListItemIcon>
-        <PaymentIcon sx={{ color: theme.smnk[1000] }} />
+        <PaymentIcon sx={{ color: theme.rent[1000] }} />
       </ListItemIcon>
       <ListItemText
         primary={<MenuLink label="Bank Details" pending={false} />}

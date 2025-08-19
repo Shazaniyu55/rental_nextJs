@@ -33,7 +33,7 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography color={theme.smnk[1200]}>{children}</Typography>
+          <Typography color={theme.rent[1200]}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -69,7 +69,7 @@ export default function UserDetailsTab({
     <SmnkErrorBoundary>
       <Box
         sx={{ bgcolor: "background.paper", minWidth: "100%" }}
-        color={theme.smnk[1200]}
+        color={theme.rent[1200]}
       >
         <Tabs
           value={value}
@@ -158,10 +158,10 @@ export function BlackListDisplay({
       <Box
         width={10}
         height={10}
-        bgcolor={theme.smnk[1200]}
+        bgcolor={theme.rent[1200]}
         borderRadius={"50%"}
       ></Box>
-      <Typography color={theme.smnk[1200]} textTransform={"capitalize"}>
+      <Typography color={theme.rent[1200]} textTransform={"capitalize"}>
         {label}
       </Typography>
     </Box>

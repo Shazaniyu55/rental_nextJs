@@ -21,7 +21,7 @@ export default function ExpLink() {
       try {
         const res = await axios({
           method: "GET",
-          url: `${process.env.SMNK_URL}api/users/swExtra/exp/${_id}`,
+          url: `${process.env.RENTALS_URL}api/users/swExtra/exp/${_id}`,
         });
         const data = await res.data;
         setExp(data);
@@ -41,7 +41,7 @@ export default function ExpLink() {
       >
         {" "}
         <ListItemIcon>
-          <AddHomeWorkIcon sx={{ color: theme.smnk[1000] }} />
+          <AddHomeWorkIcon sx={{ color: theme.rent[1000] }} />
         </ListItemIcon>
         <ListItemText
           primary={<MenuLink label="Add Experience" pending={true} />}
@@ -57,7 +57,7 @@ export default function ExpLink() {
       }}
     >
       <ListItemIcon>
-        <WorkHistoryIcon sx={{ color: theme.smnk[1000] }} />
+        <WorkHistoryIcon sx={{ color: theme.rent[1000] }} />
       </ListItemIcon>
       <ListItemText primary={<MenuLink label="Experience" pending={false} />} />
     </ListItemButton>

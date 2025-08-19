@@ -15,7 +15,7 @@ export default function DashboardDp() {
   return (
     <IconButton
       onClick={() => {
-        if (type === "skilled worker") {
+        if (type === "agent") {
           router.push("/sw-dashboard");
         } else if (type === "client") {
           router.push("/c-dashboard");

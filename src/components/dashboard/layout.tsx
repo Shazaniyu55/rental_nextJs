@@ -28,7 +28,7 @@ export default function Layout(props: { children: any }) {
           {mediaQuery && (
             <Grid item xs={12} md={3}>
               <Box
-                color={theme.smnk[1000]}
+                color={theme.rent[1000]}
                 minHeight={"100vh"}
                 maxWidth={300}
                 bgcolor={"whitesmoke"}

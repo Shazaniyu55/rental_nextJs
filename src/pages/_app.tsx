@@ -94,7 +94,7 @@ const logError = async (error: Error, info: { componentStack: string }) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}/api/error`,
+      url: `${process.env.RENTALS_URL}/api/error`,
       data: { msg: error.toString(), info },
     });
   } catch (err) {}

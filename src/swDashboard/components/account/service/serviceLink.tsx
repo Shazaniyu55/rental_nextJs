@@ -22,7 +22,7 @@ export default function ServiceLink() {
       >
         {" "}
         <ListItemIcon>
-          <AddBusinessIcon sx={{ color: theme.smnk[1000] }} />
+          <AddBusinessIcon sx={{ color: theme.rent[1000] }} />
         </ListItemIcon>
         <ListItemText
           primary={<MenuLink label="Add Service" pending={true} />}
@@ -38,7 +38,7 @@ export default function ServiceLink() {
       }}
     >
       <ListItemIcon>
-        <BusinessIcon sx={{ color: theme.smnk[1000] }} />
+        <BusinessIcon sx={{ color: theme.rent[1000] }} />
       </ListItemIcon>
       <ListItemText primary={<MenuLink label="Services" pending={false} />} />
     </ListItemButton>

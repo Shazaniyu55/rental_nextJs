@@ -4,7 +4,7 @@ export const fetchTalents = async () => {
   try {
     const res = await axios({
       method: "GET",
-      url: `${process.env.SMNK_URL}api/talents`,
+      url: `${process.env.RENTALS_URL}api/talents`,
     });
     const data = await res.data;
     return data;
@@ -17,7 +17,7 @@ export const fetchCategories = async () => {
   try {
     const res = await axios({
       method: "GET",
-      url: `${process.env.SMNK_URL}api/talents/categories`,
+      url: `${process.env.RENTALS_URL}api/talents/categories`,
     });
     const data = await res.data;
     return data;
@@ -30,7 +30,7 @@ export const fetchServiceTitles = async () => {
   try {
     const res = await axios({
       method: "GET",
-      url: `${process.env.SMNK_URL}api/talents/service-titles`,
+      url: `${process.env.RENTALS_URL}api/talents/service-titles`,
     });
     const data = await res.data;
     return data;
@@ -43,7 +43,7 @@ export const fetchJobs = async () => {
   try {
     const res = await axios({
       method: "GET",
-      url: `${process.env.SMNK_URL}api/job`,
+      url: `${process.env.RENTALS_URL}api/job`,
     });
     const data = await res.data;
     return data;
@@ -57,7 +57,7 @@ export const fetchUsers = async (service:string) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/talents/services`,
+      url: `${process.env.RENTALS_URL}api/talents/services`,
       data:{service}
     });
     const data = await res.data;
@@ -71,7 +71,7 @@ export const fetchRecommendedSW = async (jobId:string) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/talents/recommended-sw`,
+      url: `${process.env.RENTALS_URL}api/talents/recommended-sw`,
       data:{jobId}
     });
     const data = await res.data;
@@ -85,7 +85,7 @@ export const fetchProfessionalsDetails = async (userId:string) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/talents/details`,
+      url: `${process.env.RENTALS_URL}api/talents/details`,
       data:{userId}
     });
     const data = await res.data;
@@ -99,7 +99,7 @@ export const getWallet = async (userId:string) => {
   try {
     const res = await axios({
       method: "GET",
-      url: `${process.env.SMNK_URL}api/wallet/${userId}`,
+      url: `${process.env.RENTALS_URL}api/wallet/${userId}`,
     });
     const data = await res.data;
     return data;
@@ -113,7 +113,7 @@ export const fetchSearchJobs = async (searchParam:string) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${process.env.SMNK_URL}api/job/search`,
+      url: `${process.env.RENTALS_URL}api/job/search`,
       data:{searchParam}
     });
     data = await res.data;

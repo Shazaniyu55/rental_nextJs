@@ -1,4 +1,4 @@
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import LoadingAlert from "@/components/alerts/Loading";
 import ClientDetailsTable from "@/components/tables/ClientDetailsTable";
 import { getUserInfo } from "@/lib/utils/user";

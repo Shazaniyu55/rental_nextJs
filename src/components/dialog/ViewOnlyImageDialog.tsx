@@ -38,7 +38,7 @@ const ViewOnlyImageDialog = React.forwardRef(({}, _ref) => {
   }));
 
   //ref for snackbar
-  const snackbarRef = useRef();
+  const snackbarRef = useRef(null);
 
   //handle close event
   const handleClose = () => {

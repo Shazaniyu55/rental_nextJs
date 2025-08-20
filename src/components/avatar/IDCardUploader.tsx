@@ -30,7 +30,7 @@ function IDCardUploader() {
   const [color, setColor] = useState<AlertColor>("error");
   const [verified, setVerified] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   const router = useRouter();
 
   useEffect(() => {

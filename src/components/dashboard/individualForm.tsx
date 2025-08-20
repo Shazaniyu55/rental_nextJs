@@ -27,7 +27,7 @@ export default function IndividualForm({ router }: { router: any }) {
   });
 
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   const individualInfoSchema = object({
     firstName: string().required("First Name is required"),

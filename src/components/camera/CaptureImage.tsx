@@ -45,7 +45,7 @@ export default function CaptureCameraImage() {
   const [msg, setMsg] = useState("");
   const [color, setColor] = useState<AlertColor>("error");
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   const capturePhoto = useCallback(async () => {
     if (webcamRef.current) {

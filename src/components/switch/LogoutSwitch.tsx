@@ -14,7 +14,7 @@ import { SmnkErrorBoundary, theme } from "@/pages/_app";
 export default function LogoutSwitch() {
   const dispatch = useDispatch<AppDispatch>();
   //declare refs
-  const dialogRef = useRef();
+  const dialogRef = useRef(null);
   const router = useRouter();
 
   const confirmLogout = (confirm: boolean) => {

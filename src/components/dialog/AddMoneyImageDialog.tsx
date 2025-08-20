@@ -44,7 +44,7 @@ const AddMoneyImageDialog = React.forwardRef(
     }));
 
     //ref for snackbar
-    const snackBarRef = useRef();
+    const snackBarRef = useRef(null);
 
     //handle close event
     const handleClose = () => {

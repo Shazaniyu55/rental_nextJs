@@ -51,9 +51,9 @@ export default function ClientReportDetailsAccordion({
   const [msg, setMsg] = useState("");
   const [color, setColor] = useState<AlertColor>("error");
   //declare refs
-  const snackBarRef = useRef();
-  const dialogRef = useRef();
-  const readFileDialogRef = useRef();
+  const snackBarRef = useRef(null);
+  const dialogRef = useRef  (null);
+  const readFileDialogRef = useRef(null);
 
   //accept report handler
   async function approveJob() {

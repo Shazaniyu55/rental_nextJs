@@ -29,10 +29,10 @@ export default function ClientProposalDetailsAccordion({
   const [msg, setMsg] = useState("");
   const [color, setColor] = useState<AlertColor>("error");
   //declare refs
-  const snackBarRef = useRef();
-  const acceptDialogRef = useRef();
-  const rejectDialogRef = useRef();
-  const readFileDialogRef = useRef();
+  const snackBarRef = useRef(null);
+  const acceptDialogRef = useRef(null);
+  const rejectDialogRef = useRef(null);
+  const readFileDialogRef = useRef(null);
 
   const confirmAcceptAction = async (confirm: boolean) => {
     if (!confirm) {

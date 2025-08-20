@@ -26,13 +26,13 @@ export default function ClientJobDetailsAction({ jobId }: { jobId: string }) {
   const [error, setError] = useState();
 
   //ref for rating dialog
-  const ratingRef = useRef();
+  const ratingRef = useRef(null);
   //ref for tipping dialog
-  const tippingRef = useRef();
+  const tippingRef = useRef(null);
   //declare ref for dialog
-  const dialogRef = useRef();
+  const dialogRef = useRef(null);
   //declare ref for snackbar
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   useEffect(() => {
     getJobStatus(jobId, setJobStatus, setError);

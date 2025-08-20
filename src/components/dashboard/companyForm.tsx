@@ -19,7 +19,7 @@ export default function CompanyForm({ router }: { router: any }) {
   const [color, setColor] = useState<AlertColor>("error");
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   //sign up submit handler
   const companyProfileSubmitHandler = async (

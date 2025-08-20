@@ -27,7 +27,7 @@ export default function EditExperienceForm({
 
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   const {
     swExtra: {

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import SearchedJobDetailsAccordion from "../accordion/SearchedJobDetailsAccordion";
 import LoadingAlert from "../alerts/Loading";
 import InfoAlert from "../alerts/Info";
-import ErrorAlert from "../alerts/Error";
+import ErrorAlert from "../alerts/error";
 import { SmnkErrorBoundary } from "@/pages/_app";
 import SWJobDetailsCard from "../card/SWJobDetailsCard";
 

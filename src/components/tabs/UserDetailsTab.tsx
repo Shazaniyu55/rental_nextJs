@@ -9,7 +9,7 @@ import { Card } from "@mui/material";
 import { SmnkErrorBoundary, theme } from "@/pages/_app";
 import InfoAlert from "../alerts/Info";
 import Comments from "../job/Comments";
-import CatalogDisplayStepper from "../stepper/CatalogDisplayStepper";
+// import CatalogDisplayStepper from "../stepper/CatalogDisplayStepper";
 import { BlackTypography } from "../card/ClientJobDetailsCard";
 import Experience from "@/lib/types/experience";
 
@@ -125,9 +125,9 @@ export default function UserDetailsTab({
               <InfoAlert message="No Experience added" />
             )}
           </TabPanel>
-          <TabPanel value={value} index={3} dir={theme.direction}>
+          {/* <TabPanel value={value} index={3} dir={theme.direction}>
             <CatalogDisplayStepper catalog={catalogue} forClient={forClient} />
-          </TabPanel>
+          </TabPanel> */}
           <TabPanel value={value} index={4} dir={theme.direction}>
             <Comments userId={userId} />
           </TabPanel>

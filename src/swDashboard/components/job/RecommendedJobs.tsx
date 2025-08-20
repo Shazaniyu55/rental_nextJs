@@ -60,7 +60,7 @@ function RecommendedJobs() {
         justifyContent={"flex-start"}
         pl={1}
       >
-        <Typography color={theme.smnk[1200]} variant="h6" mb={2} mt={5}>
+        <Typography color={theme.rent[1200]} variant="h6" mb={2} mt={5}>
           Recommended Jobs
         </Typography>
         {Array.isArray(jobs) &&

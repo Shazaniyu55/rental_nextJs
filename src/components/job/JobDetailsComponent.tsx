@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import Image from "next/image";
 import SWReportsAccordion from "../accordion/SWReportsAccordion";
-import ErrorAlert from "../alerts/Error";
+import ErrorAlert from "../alerts/error";
 import { SmnkErrorBoundary } from "@/pages/_app";
 import { JobDetails } from "../card/ClientJobDetailsCard";
 

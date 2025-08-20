@@ -1,6 +1,6 @@
 import { getUserProfile } from "@/lib/utils/user";
 import React, { useEffect, useState } from "react";
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import LoadingAlert from "@/components/alerts/Loading";
 import SWDetailsNoCollapse from "@/components/card/SWDetailsNoCollapse";
 import { ClientProfile } from "@/components/card/ClientDetailsDashboard";

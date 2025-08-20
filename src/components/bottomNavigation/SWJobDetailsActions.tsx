@@ -29,8 +29,8 @@ export default function SWJobDetailsActions({ jobId }: { jobId: string }) {
   const [color, setColor] = useState<AlertColor>("error");
 
   //declare refs
-  const snackBarRef = useRef();
-  const dialogRef = useRef();
+  const snackBarRef = useRef(null);
+  const dialogRef = useRef(null);
 
   const confirmAction = async (confirm: boolean) => {
     if (!confirm) {

@@ -1,5 +1,5 @@
 import AdminCompliantsAccordion from "@/components/accordion/AdminCompliantsAccordion";
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import InfoAlert from "@/components/alerts/Info";
 import LoadingAlert from "@/components/alerts/Loading";
 import { getAllComplaints } from "@/lib/complaint";

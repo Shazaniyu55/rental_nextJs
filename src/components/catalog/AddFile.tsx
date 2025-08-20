@@ -21,7 +21,7 @@ function AddFile() {
   const [color, setColor] = useState<AlertColor>("error");
   const dispatch = useDispatch<AppDispatch>();
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 

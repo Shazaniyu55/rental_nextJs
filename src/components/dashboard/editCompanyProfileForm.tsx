@@ -21,7 +21,7 @@ export default function EditCompanyProfileForm({ router }: { router: any }) {
 
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   const { data, error } = useSWR("getCompProfile", getCompanyProfile(user._id));
 
   if (error) return <ErrorAlert />;

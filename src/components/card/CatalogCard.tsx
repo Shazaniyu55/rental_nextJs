@@ -39,8 +39,8 @@ export default function CatalogCard({
   const [msg, setMsg] = React.useState("");
   const [color, setColor] = React.useState<AlertColor>("error");
   //declare refs
-  const dialogRef = React.useRef();
-  const snackBarRef = React.useRef();
+  const dialogRef = React.useRef(null);
+  const snackBarRef = React.useRef(null);
 
   const confirmDelete = async (confirm: boolean) => {
     if (!confirm) {

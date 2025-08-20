@@ -47,7 +47,7 @@ const ImageDialog = React.forwardRef(
     }));
 
     //ref for snackbar
-    const snackbarRef = useRef();
+    const snackbarRef = useRef(null);
 
     //handle close event
     const handleClose = () => {

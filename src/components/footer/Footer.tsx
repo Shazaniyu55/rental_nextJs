@@ -2,6 +2,7 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
+import SubscribeToNewsLetter from "./SubscribeToNewsLetter";
 const Footer = () => {
   return (
     <footer className="border-t border-neutral-200 bg-black  px-5 md:px-16 py-10 md:py-16">
@@ -58,6 +59,22 @@ const Footer = () => {
                   Home
                 </Link>
 
+
+                <Link
+                  href="/"
+                  className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
+                >
+                  About Us
+                </Link>
+
+
+                <Link
+                  href="/"
+                  className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
+                >
+                  Contact Us
+                </Link>
+
               
               
                 
@@ -75,7 +92,23 @@ const Footer = () => {
                   href="/about"
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
-                  Regular Basic Cleaning
+                  Get Homes
+                </Link>
+
+
+                 <Link
+                  href="/about"
+                  className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
+                >
+                  Get Homes
+                </Link>
+
+
+                 <Link
+                  href="/about"
+                  className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
+                >
+                  Get Homes
                 </Link>
                 
                
@@ -123,6 +156,8 @@ const Footer = () => {
         SPIC AND SPAN. Home & Office Cleaning is an online marketplace that matches private and commercial<br/>cushrefmers with experienced cleaners in Austria, Belgium, France, Germany, Italy, Luxembourg, Poland, Portugal,<br/> Spain, and Sweden. SPIC AND SPAN. Home & Office Cleaning is a registered trademark of A&K Ventures OÜ,<br/> a company founded in July 2016 by Karol Kaczmarek and Amadeusz Annissimo.
         </p> */}
       </div>
+
+      <SubscribeToNewsLetter/>
 
       
     </footer>

@@ -9,9 +9,8 @@ import Head from "next/head";
 import Layout from "@/components/layout";
 import HomePageStepper from "@/components/stepper/HomePageStepper";
 import { Cancel } from "@mui/icons-material";
-import TestimonialStepper from "@/components/stepper/TestimonialStepper";
-import BlogStepper from "@/components/stepper/BlogStepper";
 import CatalogStepper from "@/components/stepper/CatalogStepper";
+import ScrollTriggered from "@/components/stepper/card2";
 
 
 const geistSans = Geist({
@@ -78,6 +77,8 @@ export default function Home() {
         </Box>
 
         {/* <*/}
+
+        <ScrollTriggered/>
 
  
         <Box
@@ -162,6 +163,7 @@ export default function Home() {
           </Card>
         </Box>
 <CatalogStepper/>
+
       </main>
     </Layout>
   );

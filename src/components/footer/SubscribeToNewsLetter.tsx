@@ -12,7 +12,7 @@ function SubscribeToNewsLetter() {
         try {
           await axios({
             method: "POST",
-            url: `${process.env.SMNK_URL}/api/chat`,
+            url: `${process.env.RENTALS_URL}/api/chat`,
             data: {  },
           });
         } catch (err) {
@@ -51,7 +51,8 @@ function SubscribeToNewsLetter() {
          >
           <Typography variant='caption'>Subscribe to our Newsletter</Typography>
            <Field
-             as={Input} fullWidth
+             as={Input} 
+             
              variant="soft"
              placeholder="Your Email"
              type="email"

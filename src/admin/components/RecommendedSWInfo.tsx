@@ -1,5 +1,6 @@
 import { Job, getRecommendedSkilledWorkersInfo } from '@/lib/types/job'
-import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material'
+import {  CardContent,  Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 import useSWR from 'swr'
 
 const SWInfo = (info:any)=>{

@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { getAllJobs } from "@/lib/types/job";
 import JobsDetailsTable from "./jobs/JobsDetailsTable";
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import InfoAlert from "@/components/alerts/Info";
 import LoadingAlert from "@/components/alerts/Loading";
 import { Typography } from "@mui/material";

@@ -63,11 +63,11 @@ multerHandler
         }
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       res
         .status(400)
         .json({
-          message: "Your upload was not added to your catalog",
+          message: `Your upload was not added to your catalog ${err}`,
           successful: false,
         });
     }

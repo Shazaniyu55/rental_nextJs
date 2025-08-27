@@ -9,6 +9,9 @@ import Head from "next/head";
 import Layout from "@/components/layout";
 import HomePageStepper from "@/components/stepper/HomePageStepper";
 import { Cancel } from "@mui/icons-material";
+import TestimonialStepper from "@/components/stepper/TestimonialStepper";
+import BlogStepper from "@/components/stepper/BlogStepper";
+import CatalogStepper from "@/components/stepper/CatalogStepper";
 
 
 const geistSans = Geist({
@@ -147,8 +150,7 @@ export default function Home() {
             </CardContent>
           </Card>
         </Box>
-
-       
+<CatalogStepper/>
       </main>
     </Layout>
   );

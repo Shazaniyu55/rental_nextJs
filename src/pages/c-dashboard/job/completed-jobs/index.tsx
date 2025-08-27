@@ -26,7 +26,7 @@ function CompletedJobsPage() {
         if (_id) {
           const res = await axios({
             method: "GET",
-            url: `${process.env.SMNK_URL}api/job/completed-jobs/${_id}`,
+            url: `${process.env.RENTALS_URL}api/job/completed-jobs/${_id}`,
           });
           const data = await res.data;
           //console.log(data)

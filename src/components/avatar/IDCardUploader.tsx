@@ -79,7 +79,7 @@ function IDCardUploader() {
           const refState = snackBarRef.current as any;
           refState.handleClick();
           //get user from local storage
-          let user: User = JSON.parse(
+          const user: User = JSON.parse(
             JSON.parse(JSON.stringify(localStorage.getItem("user")))
           );
 

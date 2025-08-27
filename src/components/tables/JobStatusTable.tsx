@@ -16,7 +16,7 @@ function createData(
 
 const createRow=(jobStatus:any)=>{
     const row:any[] = []
-    for(let key  in jobStatus){
+    for(const key  in jobStatus){
         if(key === 'approvedUserId') continue
         const value = jobStatus[key]
         row.push(createData(key,value))

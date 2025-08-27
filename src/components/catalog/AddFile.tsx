@@ -53,7 +53,7 @@ function AddFile() {
 
                 if (data.successful) {
                   //get swExtra from local storage
-                  let swExtra = JSON.parse(
+                  const swExtra = JSON.parse(
                     JSON.parse(JSON.stringify(localStorage.getItem("swExtra")))
                   );
                   if (swExtra.catalog) {
@@ -208,7 +208,7 @@ export function validImageFile(catalog: any) {
 }
 export function getCatalogFromLocalStorage() {
   //get swExtra from local storage
-  let swExtra = JSON.parse(
+  const swExtra = JSON.parse(
     JSON.parse(JSON.stringify(localStorage.getItem("swExtra")))
   );
   return swExtra;

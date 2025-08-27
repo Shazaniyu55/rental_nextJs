@@ -49,7 +49,7 @@ function ProfilePicUploader() {
         setUploading(false);
         setFile("");
         //get user from local storage
-        let user = JSON.parse(
+        const user = JSON.parse(
           JSON.parse(JSON.stringify(localStorage.getItem("user")))
         );
 

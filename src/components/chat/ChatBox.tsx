@@ -27,8 +27,8 @@ const ChatBox = () => {
           if (Array.isArray(data)) {
             setChats(
               data.sort(function (a: any, b: any) {
-                let x = a.date.toLowerCase();
-                let y = b.date.toLowerCase();
+                const x = a.date.toLowerCase();
+                const y = b.date.toLowerCase();
                 if (x < y) {
                   return 1;
                 }

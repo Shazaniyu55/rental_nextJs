@@ -1086,7 +1086,7 @@ export type FormControls = {
   name: string;
   label: string | any;
   control: string;
-  options?: {}[];
+  options?: String[];
   fieldToCheckAgainst?: string;
   valueOfFieldToCheckAgainst?: any;
   required?: boolean;
@@ -1100,7 +1100,7 @@ export type FormControls = {
 };
 export type FormControlObject = {
   initialValues: any;
-  validationSchema: {};
+  validationSchema: [];
   onSubmit: (...params: any) => void;
   formControls: FormControls[];
 };

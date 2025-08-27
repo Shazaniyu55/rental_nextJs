@@ -272,8 +272,8 @@ export const ChatGround = ({
             .concat(receiverChats)
             .flat()
             .sort(function (a: any, b: any) {
-              let x = a.time.toLowerCase();
-              let y = b.time.toLowerCase();
+              const x = a.time.toLowerCase();
+              const y = b.time.toLowerCase();
               if (x < y) {
                 return -1;
               }
@@ -288,8 +288,8 @@ export const ChatGround = ({
       if (senderChats) {
         setSortedChats(
           senderChats.flat().sort(function (a: any, b: any) {
-            let x = a.time.toLowerCase();
-            let y = b.time.toLowerCase();
+            const x = a.time.toLowerCase();
+            const y = b.time.toLowerCase();
             if (x < y) {
               return -1;
             }
@@ -304,8 +304,8 @@ export const ChatGround = ({
       if (receiverChats) {
         setSortedChats(
           receiverChats.flat().sort(function (a: any, b: any) {
-            let x = a.time.toLowerCase();
-            let y = b.time.toLowerCase();
+            const x = a.time.toLowerCase();
+            const y = b.time.toLowerCase();
             if (x < y) {
               return -1;
             }

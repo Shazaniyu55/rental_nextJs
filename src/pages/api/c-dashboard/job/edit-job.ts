@@ -7,7 +7,7 @@ const editJob = async(jobDetails:JobDetails,res:any,_id:string)=>{
     if(jobDetails){
         try{
             
-            let newJob = await Job.findOne({_id})
+            const newJob = await Job.findOne({_id})
             //edit newJob for changes
             newJob.jobDetails = jobDetails
 

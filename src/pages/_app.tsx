@@ -53,7 +53,7 @@ declare module "@mui/material/styles" {
     main: string;
     dark: string;
   }
-  interface PaletteOptions {}
+  // interface PaletteOptions {}
 };
 
 

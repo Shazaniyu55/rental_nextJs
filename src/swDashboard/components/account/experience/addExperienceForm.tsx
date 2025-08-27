@@ -33,7 +33,7 @@ export default function AddExperienceForm({ router }: { router: NextRouter }) {
   const dispatch = useDispatch<AppDispatch>();
 
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   //submit handler
   const experienceSubmitHandler = async (
     values: Experience,
@@ -41,7 +41,7 @@ export default function AddExperienceForm({ router }: { router: NextRouter }) {
     index?: number
   ) => {
     //get swExtra from local storage
-    let swExtra = JSON.parse(
+    const swExtra = JSON.parse(
       JSON.parse(JSON.stringify(localStorage.getItem("swExtra")))
     );
 

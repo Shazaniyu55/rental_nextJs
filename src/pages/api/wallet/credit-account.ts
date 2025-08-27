@@ -17,8 +17,8 @@ export default async function handler(req: any, res: any) {
 }
 
 export async function CreditWallet(amount: number, userId: string) {
-  let successful:boolean = false,
-  err:any = null
+  let successful:boolean = false
+  const  err:any = null
  
   if (amount > 0 && userId) {
     try {

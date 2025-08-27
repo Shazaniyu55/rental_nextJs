@@ -1,6 +1,5 @@
 import { JobStatus } from "@/components/job/AdminJobStatus";
 import Job from "@/lib/model/job";
-import Rating from "@/lib/model/rating";
 import dbConnect from "@/lib/mongoose";
 
 export default async function handler(req: any, res: any) {

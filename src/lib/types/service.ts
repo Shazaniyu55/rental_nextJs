@@ -1,10 +1,9 @@
 import axios from "axios";
-import { array, object, string } from "yup";
+import {  object, string } from "yup";
 import { NextRouter } from "next/dist/client/router";
 import { Dispatch, MutableRefObject, SetStateAction } from "react";
 import { AlertColor } from "@mui/material";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
+
 
 export type Service = {
   _id?: string;
@@ -28,7 +27,7 @@ export const serviceSubmitHandler = async (
   index?: number
 ) => {
   //get swExtra from local storage
-  let swExtra = JSON.parse(
+  const swExtra = JSON.parse(
     JSON.parse(JSON.stringify(localStorage.getItem("swExtra")))
   );
 

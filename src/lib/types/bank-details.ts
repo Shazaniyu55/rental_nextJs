@@ -18,7 +18,7 @@ export const bankDetailsSubmitHandler = async (
   router: NextRouter,  snackbarParams:SnackBarParams
 ) => {
     //get swExtra from local storage
-    let swExtra:SWExtra = JSON.parse(
+    const swExtra:SWExtra = JSON.parse(
       JSON.parse(JSON.stringify(localStorage.getItem("swExtra")))
     );
     

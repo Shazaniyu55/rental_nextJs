@@ -28,7 +28,7 @@ export default async function handler(req: any, res: any) {
       );
       //filter skilled workers
       const filterredSW: any[] = [];
-      for (let sw of swExtra) {
+      for (const sw of swExtra) {
         const userId = sw.userId;
         //get sw category and service titles
         const { servCat1, servCat2, servTitle1, servTitle2 } =
@@ -57,19 +57,19 @@ export default async function handler(req: any, res: any) {
       //sort by subscription type
       const swBySub: any = [];
       //add sw with gold subscription to the swSub
-      for (let sw of filterredSW) {
+      for (const sw of filterredSW) {
         if (sw.subscription.type === "Gold") {
           swBySub.push(sw.userId);
         }
       }
       //add sw with silver subscription to the swSub
-      for (let sw of filterredSW) {
+      for (const sw of filterredSW) {
         if (sw.subscription.type === "Silver") {
           swBySub.push(sw.userId);
         }
       }
       //add sw with bronze subscription to the swSub
-      for (let sw of filterredSW) {
+      for (const sw of filterredSW) {
         if (sw.subscription.type === "Bronze") {
           swBySub.push(sw.userId);
         }

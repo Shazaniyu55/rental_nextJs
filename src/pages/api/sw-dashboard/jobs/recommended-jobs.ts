@@ -64,7 +64,7 @@ export const isJobInSwPrefferredLocation = (
       );
     } else {
       //return true if job is in prefferred locations
-      for (let loc of param.prefferredLocations) {
+      for (const loc of param.prefferredLocations) {
         
         if (param.jobLocation.toLowerCase() === loc.toLowerCase()) {
           return isSwRecommended(

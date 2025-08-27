@@ -51,7 +51,7 @@ function TransferForUpgradePaymentForm({
         formData.append("userId", _id);
         formData.append("type", packageName);
         //get swExtra from local storage
-        let swExtra = JSON.parse(
+        const swExtra = JSON.parse(
           JSON.parse(JSON.stringify(localStorage.getItem("swExtra")))
         );
         const res = await axios({

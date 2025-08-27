@@ -8,7 +8,7 @@ import Providers from "@/store/provider";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorAlert from "@/components/alerts/error";
 import axios from "axios";
-
+import "@mui/x-data-grid/styles.css";
 
 declare module "@mui/material/styles" {
   interface Theme {

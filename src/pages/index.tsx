@@ -90,7 +90,7 @@ export default function Home() {
         >
           <Card
             sx={{
-              bgcolor: "#2266BF",
+              bgcolor: "#000000ff",
               color: "white",
               minHeight: 250,
               minWidth: { xs: 300, md: 400, lg: 500 },
@@ -100,11 +100,15 @@ export default function Home() {
             }}
           >
             <CardContent>
-              <Typography variant="h6">How service fees are charged</Typography>
+              <Typography variant="h6">Become An Agent</Typography>
               <Typography>
-                Each job comes with a fee, however the amount depends on how
-                much money you would make from a customer. A 12% administrative
-                cost fee would be applied to all skilled personnel.
+                At Rentals, we believe in empowering individuals to take control
+                of their careers and achieve financial independence. That's why
+                we offer a comprehensive agent program that provides all the
+                tools and resources needed to succeed in the real estate
+                industry. As an agent with Rentals, you'll have access to a wide
+                range of properties, competitive commission rates, and ongoing
+                training and support to help you grow your business.
               </Typography>
             </CardContent>
           </Card>
@@ -121,18 +125,22 @@ export default function Home() {
           >
             <CardContent>
               <Typography variant="h6">
-                How your ranking impacts your success of landing jobs
+                Comfortable Homes and offices
               </Typography>
               <Typography>
-                After completing each job, your review gauges how happy your
-                clients are with your job. Your work rating affects how
-                well-liked and trusted you are among clients.
+                At Rentals, we understand the importance of having a comfortable
+                and safe place to call home or work. That's why we offer a wide
+                range of rental properties that are designed to meet the needs
+                of our clients. From cozy apartments to spacious offices, we
+                have something for everyone. Our properties are well-maintained
+                and equipped with all the necessary amenities to ensure a
+                comfortable living or working experience.
               </Typography>
             </CardContent>
           </Card>
           <Card
             sx={{
-              bgcolor: "#7E1120",
+              bgcolor: "#8209a3ff",
               color: "white",
               minHeight: 250,
               minWidth: { xs: 300, md: 400, lg: 500 },
@@ -141,11 +149,14 @@ export default function Home() {
             }}
           >
             <CardContent>
-              <Typography variant="h6">Improvement suggestions</Typography>
+              <Typography variant="h6">Best Propert</Typography>
               <Typography>
-                Before submitting your work, make sure you often review it to
-                ensure it is error-free. Before you start, take some time to go
-                through what your clients want you to deliver.
+                At Rentals, we strive to provide the best properties for our
+                clients. Our extensive catalog includes a wide range of options
+                to suit every need and budget. Whether you're looking for a
+                cozy apartment or a spacious house, we have something for
+                everyone. Our team of experts is dedicated to helping you find
+                the perfect property that meets your requirements.
               </Typography>
             </CardContent>
           </Card>

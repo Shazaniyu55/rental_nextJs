@@ -84,7 +84,7 @@ export const Upgrade = ({ visibility }: { visibility: string }) => {
         }}
         size="small"
         variant="contained"
-        sx={{ bgcolor: theme.smnk[1200] }}
+        sx={{ bgcolor: theme.rent[1200] }}
       >
         Upgrade
       </Button>

@@ -71,7 +71,7 @@ export default function AddLocation() {
       try {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/sw/add-locations`,
+          url: `${process.env.RENTALS_URL}api/sw/add-locations`,
           data: { locations: locs, userId: _id },
         });
         const data = res.data;

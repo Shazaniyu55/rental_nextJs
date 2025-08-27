@@ -3,49 +3,59 @@ import { Box, CardActions, Card, CardContent } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
-import AdminJobStatus, { JobStatus, getJobStatus } from "../job/AdminJobStatus";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import ProposalsAccordion from "./ProposalsAccordion";
-import ClientReportsAccordion from "./ClientsReportsAccordion";
-import ClientJobDetailsAction from "../bottomNavigation/ClientJobDetailsAction";
+import axios from "axios";
+
 import ErrorAlert from "../alerts/error";
 import InfoAlert from "../alerts/Info";
 import { SmnkErrorBoundary, theme } from "@/pages/_app";
 import JobDetailsCard from "../card/ClientJobDetailsCard";
 import SWDetailsNoCollapse from "../card/SWDetailsNoCollapse";
-import axios from "axios";
-import RecommendedProfAccordion from "./RecommendedProfAccordion";
+import ClientJobDetailsAction from "../bottomNavigation/ClientJobDetailsAction";
+
+// ✅ Dynamically import client-only components
+const AdminJobStatus = dynamic(() => import("../job/AdminJobStatus"), { ssr: false });
+const ProposalsAccordion = dynamic(() => import("./ProposalsAccordion"), { ssr: false });
+const ClientReportsAccordion = dynamic(() => import("./ClientsReportsAccordion"), { ssr: false });
+const RecommendedProfAccordion = dynamic(() => import("./RecommendedProfAccordion"), { ssr: false });
+
+import type { JobStatus } from "../job/AdminJobStatus";
 
 export default function ClientJobDetailsAccordion({ job }: { job: any }) {
   const { user } = useSelector((state: RootState) => state.users);
-
   const [jobStatus, setJobStatus] = useState<JobStatus | null>(null);
-  const [error, setError] = React.useState();
+  const [error, setError] = useState<any>(null);
 
   useEffect(() => {
     if (job && user) {
-      getJobStatus(job._id, setJobStatus, setError, user._id);
+      // Import getJobStatus only in client side to avoid SSR errors
+      import("../job/AdminJobStatus").then(({ getJobStatus }) => {
+        getJobStatus(job._id, setJobStatus, setError, user._id);
+      });
     }
   }, [job, user]);
 
   if (error) return <ErrorAlert />;
   if (!job || !jobStatus) return <p></p>;
+
   return (
     <SmnkErrorBoundary>
       <Card sx={{ mb: 5, bgcolor: "whitesmoke", color: theme.rent[1200] }}>
         <CardContent>
           <JobDetailsCard job={job} />
+
           {!jobStatus.isProposalAccepted && (
             <RecommendedProfAccordion jobId={job._id} />
           )}
+
           {!job.proposalAccepted && (
             <ProposalsAccordion
-              proposals={job.proposals.filter(
-                (pro: any) => pro.rejected === false
-              )}
+              proposals={job.proposals.filter((pro: any) => pro.rejected === false)}
               jobId={job._id}
             />
           )}
+
           {!job.approved && job.reports.length > 0 && (
             <ClientReportsAccordion reports={job.reports} jobId={job._id} />
           )}
@@ -82,41 +92,35 @@ export default function ClientJobDetailsAccordion({ job }: { job: any }) {
   );
 }
 
+// ✅ Fetch recommended professionals only on client side
 const getRecommendedProfessionals = async (jobId: string) => {
   try {
-    const res = await axios({
-      method: "POST",
-      url: `${process.env.SMNK_URL}api/job/recommended-professionals`,
-      data: { jobId },
-    });
-    const data = await res.data;
-    return data;
+    const res = await axios.post(`${process.env.SMNK_URL}api/job/recommended-professionals`, { jobId });
+    return res.data;
   } catch (err: any) {
     console.log(err);
-    return err;
+    return [];
   }
 };
+
 export function RecommendedProfessional({ jobId }: { jobId: string }) {
   const [users, setUsers] = useState<any[] | null>(null);
+
   useEffect(() => {
     (async () => {
-      const data = await getRecommendedProfessionals(jobId);
-      setUsers(data);
+      if (typeof window !== "undefined") {
+        const data = await getRecommendedProfessionals(jobId);
+        setUsers(data);
+      }
     })();
   }, [jobId]);
-  if (!Array.isArray(users)) return <p></p>;
 
-  if (users.length === 0)
-    return <InfoAlert message="No recommended professionals" />;
+  if (!Array.isArray(users)) return <p></p>;
+  if (users.length === 0) return <InfoAlert message="No recommended professionals" />;
+
   return (
     <SmnkErrorBoundary>
-      <Box
-        display={"flex"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        flexWrap={"wrap"}
-        gap={5}
-      >
+      <Box display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" gap={5}>
         {users.map((user: any) => (
           <SWDetailsNoCollapse forClient={true} key={user} userId={user} />
         ))}

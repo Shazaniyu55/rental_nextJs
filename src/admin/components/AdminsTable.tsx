@@ -10,7 +10,7 @@ export default function AdminsTable({ users }: { users: any[] }) {
 
   const columns = useMemo(
     () => [
-      //{ field: "_id", headerName: "SMNK ID", width: 300 },
+      { field: "_id", headerName: "SMNK ID", width: 300 },
       {
         field: "dpFileName",
         headerName: "Photo",
@@ -26,7 +26,7 @@ export default function AdminsTable({ users }: { users: any[] }) {
       {
         field: "active",
         headerName: "Active?",
-        type: "boolean",
+        type: "boolean" as const,
         editable: true,
       },
       {
@@ -38,7 +38,6 @@ export default function AdminsTable({ users }: { users: any[] }) {
       {
         field: "actions",
         headerName: "Actions",
-        type: "actions",
         renderCell: (params: any) => (
           <UserDetailsTableActions {...{ params, rowId, admin: true }} />
         ),

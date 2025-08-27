@@ -1,11 +1,9 @@
 import React from "react";
 import {
-  Badge,
-  Box,
+
   Container,
   Divider,
   Typography,
-  Skeleton,
   Card,
   CardActionArea,
   CardMedia,
@@ -13,13 +11,12 @@ import {
 } from "@mui/material";
 import Layout from "@/components/layout";
 import Head from "next/head";
-import Image from "next/image";
 
 function TeamPage() {
   return (
     <Layout>
       <Head>
-        <title>SMNK Team</title>
+        <title>Rentals Team</title>
       </Head>
       <main>
         <Container sx={{ mt: "1rem" }}>

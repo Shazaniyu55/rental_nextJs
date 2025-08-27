@@ -9,7 +9,6 @@ import ProposalsAccordion from "./ProposalsAccordion";
 import ClientReportsAccordion from "./ClientsReportsAccordion";
 import ClientJobDetailsAction from "../bottomNavigation/ClientJobDetailsAction";
 import ErrorAlert from "../alerts/error";
-import { fetchUsers } from "@/lib/search";
 import InfoAlert from "../alerts/Info";
 import { SmnkErrorBoundary, theme } from "@/pages/_app";
 import JobDetailsCard from "../card/ClientJobDetailsCard";

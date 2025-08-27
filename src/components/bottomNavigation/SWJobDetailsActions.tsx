@@ -12,7 +12,6 @@ import { confirmSWPaid } from "@/lib/payment";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import SnackbarComponent from "../snackbar/SnackBar";
-import GenericContent from "../dialog/contents/GenericContent";
 import GenericActions from "../dialog/actions/GenericActions";
 import RateFloatingActionButtons from "../fab/Rate";
 import StartFloatingButton from "../fab/StartFloatingButton";

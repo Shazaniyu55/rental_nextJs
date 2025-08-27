@@ -30,7 +30,7 @@ function JobprogressNumber({ number }: { number: number }) {
       width={30}
       height={30}
       borderRadius={"50%"}
-      bgcolor={theme.smnk[1200]}
+      bgcolor={theme.rent[1200]}
       color={"white"}
       textAlign={"center"}
       fontWeight={"bold"}
@@ -74,7 +74,7 @@ function JobProgressLine() {
       minWidth={{ xs: 2, sm: "17%" }}
       maxWidth={{ xs: 2, sm: "17%" }}
       height={{ xs: 50, sm: 3 }}
-      bgcolor={theme.smnk[1200]}
+      bgcolor={theme.rent[1200]}
       ml={{ xs: 7, sm: 0 }}
       mb={{ xs: 1, sm: 0 }}
     ></Box>

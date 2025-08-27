@@ -1,4 +1,4 @@
-import {Box, Grid} from '@mui/material'
+import { Grid} from '@mui/material'
 import AccountActions from './actions'
 import NavSearchBox from './search'
 import NavbarDrawer from './navBarDrawer'

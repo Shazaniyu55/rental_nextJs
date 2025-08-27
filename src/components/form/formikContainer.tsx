@@ -40,7 +40,7 @@ function FormikContainer({
           sx={{
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 50%)",
             background:
-              "linear-gradient(90deg, rgba(48,191,220,1) 30%,  rgba(27,82,153,1) 100%)",
+              "linear-gradient(90deg, rgba(17, 185, 45, 1) 30%,  rgba(43, 211, 21, 1) 100%)",
           }}
         ></Box>
       )}
@@ -63,7 +63,7 @@ function FormikContainer({
         gap={{ xs: 1, sm: 5, md: 10 }}
       >
         {loginDesign && (
-          <BlackImage width={50} height={50} src="/assets/smnk.png" alt="" />
+          <BlackImage width={50} height={50} src="/globe.svg" alt="" />
         )}
 
         <Box

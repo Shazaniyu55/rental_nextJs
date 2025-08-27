@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import axios from "axios";
 import { object, ref, string } from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store";
@@ -27,7 +26,7 @@ export default function ChangePasswordForm() {
   const [color, setColor] = useState<AlertColor>("error");
 
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   //sign up submit handler
   const submitHandler = async (values: {

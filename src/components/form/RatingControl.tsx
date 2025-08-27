@@ -17,9 +17,9 @@ const labels: { [index: string]: string } = {
   5: 'Excellent+',
 };
 
-function getLabelText(value: number) {
-  return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
-}
+// function getLabelText(value: number) {
+//   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
+// }
 
 export default function RatingControl({name,label,type,...rest}:any) {
   const [value, setValue] = React.useState<number | null>(2);

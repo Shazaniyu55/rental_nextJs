@@ -1,7 +1,4 @@
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import ErrorAlert from "@/components/alerts/error";
-import HomeLogoutAppBar from "@/components/appbar/HomeLogoutAppBar";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useDispatch, useSelector } from "react-redux";

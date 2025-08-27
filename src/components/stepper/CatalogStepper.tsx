@@ -19,13 +19,13 @@ import LoadingAlert from "../alerts/Loading";
 import { SmnkErrorBoundary } from "@/pages/_app";
 // import CatalogDisplayStepper from "./CatalogDisplayStepper";
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 function CatalogStepper() {
   const { catalog } = useSelector((state: RootState) => state.swExtra.swExtra);
   const [cat, setCat] = useState<any | null>(null);
   const router = useRouter();
-  const theme = useTheme();
+  // const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {

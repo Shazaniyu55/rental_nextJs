@@ -1,4 +1,4 @@
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 function UserCompanyProfileDetails({ profile }: { profile: any }) {
   if (!profile) return <p></p>;

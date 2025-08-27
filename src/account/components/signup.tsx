@@ -246,14 +246,14 @@ export function LoginHeaderTitle() {
   return (
     <Box ml={3}>
       <Typography color={"white"} fontSize={{ xs: 20, sm: 30, md: 50 }}>
-        Everything you need
+        Sign up to find your dream rental home
       </Typography>
       <Typography
         color={"white"}
         fontSize={{ xs: 20, sm: 30, md: 50 }}
         fontWeight={"bold"}
       >
-        at your doorstep
+        at affordable prices
       </Typography>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { Badge, Box, Drawer, IconButton } from "@mui/material";
+import { Badge, Box, Drawer } from "@mui/material";
 import React from "react";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";

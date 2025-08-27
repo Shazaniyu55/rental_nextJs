@@ -20,7 +20,7 @@ export default function AddLocation() {
   const [locations, setLocations] = useState<any[]>([]);
 
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
 
   const label = () => {
     switch (true) {

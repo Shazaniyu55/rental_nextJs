@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import { Box, Card, Divider, Rating } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { SmnkErrorBoundary, theme } from "@/pages/_app";
+import { SmnkErrorBoundary } from "@/pages/_app";
 import { getUserRating } from "@/lib/utils/user";
 import { JobDetails } from "./ClientJobDetailsCard";
 import { ClientProfile } from "./ClientDetailsDashboard";

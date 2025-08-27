@@ -1,4 +1,3 @@
-import { FormikHelpers } from "formik";
 import { useRouter } from "next/router";
 import { jobSchema } from "@/lib/types/job";
 import FormikContainer from "@/components/form/formikContainer";
@@ -8,7 +7,6 @@ import { useEffect, useRef, useState } from "react";
 import { createSetFromArray, fetchCategories } from "@/lib/search";
 import SnackbarComponent from "@/components/snackbar/SnackBar";
 import { AlertColor, Typography } from "@mui/material";
-import Link from "next/link";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";

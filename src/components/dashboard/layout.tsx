@@ -1,5 +1,5 @@
 import { Box, Grid, ThemeProvider } from "@mui/material";
-import DashBoardAppBar from "../appBar/DashBoardAppBar";
+import DashBoardAppBar from "../appbar/DashBoardAppBar";
 import AdsStepper from "../stepper/AdsStepper";
 import { theme } from "@/pages/_app";
 import Head from "next/head";
@@ -9,7 +9,7 @@ import { RootState } from "@/store";
 import CDashboardMenu from "@/c-dashboard/components/account/cDashboardMenu";
 import SWDashboardMenu from "@/swDashboard/components/account/swDashboardMenu";
 import { useTheme, useMediaQuery } from "@mui/material";
-import DesktopDashboardAppBar from "../appBar/DesktopDashboardAppBar";
+import DesktopDashboardAppBar from "../appbar/DesktopDashboardAppBar";
 import BackToHistoryBottomNavigation from "../bottomNavigation/BackBottomNavigation";
 
 export default function Layout(props: { children: any }) {

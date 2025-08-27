@@ -1,10 +1,5 @@
 import * as React from "react";
-import TextField from "@mui/material/TextField";
 import { Box, Typography, Stack } from "@mui/material";
-import Autocomplete from "@mui/material/Autocomplete";
-import InputAdornment from "@mui/material/InputAdornment";
-import { IconButton } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import SearchDrawer from "../drawer/SearchDrawer";
 
 import ListItemButton from "@mui/material/ListItemButton";

@@ -9,7 +9,6 @@ import ChatNotification from "../chat/ChatNotification";
 import { useRouter } from "next/router";
 import DP from "../dashboard/dp";
 import { useTheme } from "@mui/material/styles";
-import Image from "next/image";
 import DashBoardNotification from "../dashboard/DashBoardNotification";
 import { AppBarLogo } from "./HomeLogoutAppBar";
 

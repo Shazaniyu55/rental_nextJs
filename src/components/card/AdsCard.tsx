@@ -8,12 +8,12 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { SmnkErrorBoundary } from "@/pages/_app";
 
-interface AdDetails {
-  title: string;
-  message: string;
-  landingPage: string;
-  src: string;
-}
+// interface AdDetails {
+//   title: string;
+//   message: string;
+//   landingPage: string;
+//   src: string;
+// }
 
 export default function AdvertCard({
   title,

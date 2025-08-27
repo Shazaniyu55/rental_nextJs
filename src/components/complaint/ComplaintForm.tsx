@@ -14,7 +14,7 @@ function ComplaintForm({ jobId, url }: { jobId: string; url: string }) {
   const [color, setColor] = useState<AlertColor>("error");
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   //complaint submit handler
   const complaintSubmitHandler = async (
     values: Complaint,

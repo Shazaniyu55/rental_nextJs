@@ -1,8 +1,7 @@
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import ChatNotification from "../chat/ChatNotification";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import DashBoardNotification from "../dashboard/DashBoardNotification";
 import { AppBarLogo } from "./HomeLogoutAppBar";
 

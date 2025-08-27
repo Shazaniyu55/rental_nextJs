@@ -1,28 +1,8 @@
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Badge, Box, CardActions, Divider, Grid } from "@mui/material";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
-import PendingIcon from "@mui/icons-material/Pending";
-import CategoryIcon from "@mui/icons-material/Category";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import DescriptionIcon from "@mui/icons-material/Description";
-import DateRangeIcon from "@mui/icons-material/DateRange";
-import HomeIcon from "@mui/icons-material/Home";
 import { JobStatus, getJobStatus } from "../job/AdminJobStatus";
-import { LoadingButton } from "@mui/lab";
-import JobProgress from "../../components/job/JobProgress";
-import MoneyIcon from "@mui/icons-material/Money";
-import DoneIcon from "@mui/icons-material/Done";
-import NotStartedIcon from "@mui/icons-material/NotStarted";
 import ErrorAlert from "../alerts/error";
-import LoadingAlert from "../alerts/Loading";
-import { SmnkErrorBoundary } from "@/pages/_app";
 import JobDetailsCard from "../card/ClientJobDetailsCard";
 
 export default function ClientDashboardJobDetailsAccordion({

@@ -1,7 +1,6 @@
 import { fetchSearchJobs } from "@/lib/search";
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import SearchedJobDetailsAccordion from "../accordion/SearchedJobDetailsAccordion";
 import LoadingAlert from "../alerts/Loading";
 import InfoAlert from "../alerts/Info";
 import ErrorAlert from "../alerts/error";

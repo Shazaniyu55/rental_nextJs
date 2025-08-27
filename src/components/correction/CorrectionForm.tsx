@@ -22,7 +22,7 @@ function CorrectionForm({
   const [color, setColor] = useState<AlertColor>("error");
   const [loading, setLoading] = useState(false);
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   //correction submit handler
   const correctionSubmitHandler = async (
     values: Correction,

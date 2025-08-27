@@ -1,6 +1,5 @@
 import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
-import Image from "next/image";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/router";
 import SearchBox from "../autoComplete/SearchBox";

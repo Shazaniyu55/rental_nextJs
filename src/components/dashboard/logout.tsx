@@ -1,6 +1,3 @@
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 import { logout } from "@/store/slices/userSlice";

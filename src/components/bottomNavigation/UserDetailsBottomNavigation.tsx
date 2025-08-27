@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import StarIcon from "@mui/icons-material/Star";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import { Typography, ListItemButton, Chip, ListItemText } from "@mui/material";
+import { Typography,  Chip, ListItemText } from "@mui/material";
 import { UserRating } from "../card/SWJobDetailsCard";
 import { Wallet } from "../card/ClientDetailsDashboard";
 import { useState, useEffect } from "react";

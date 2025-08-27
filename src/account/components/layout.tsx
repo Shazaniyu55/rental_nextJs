@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "../../styles/account/layout.module.css";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 

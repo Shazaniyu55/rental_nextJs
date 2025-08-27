@@ -9,7 +9,7 @@ export default async function handler(req: any, res: any) {
   try {
     if (jobId) {
       const job = await Job.findById(jobId);
-      for(let report of job.reports){
+      for(const report of job.reports){
         if(report._id.toString() === reportId){
             report.read = true
         }

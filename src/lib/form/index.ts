@@ -1086,7 +1086,7 @@ export type FormControls = {
   name: string;
   label: string | any;
   control: string;
-  options?: string[];
+  options?: string[] | { label: string; value: string }[];
   fieldToCheckAgainst?: string;
   valueOfFieldToCheckAgainst?: any;
   required?: boolean;

@@ -1,4 +1,4 @@
-import ErrorAlert from '@/components/alerts/Error'
+import ErrorAlert from '@/components/alerts/error'
 import InfoAlert from '@/components/alerts/Info'
 import Layout from '@/components/dashboard/layout'
 import ReportComponent from '@/components/report/ReportComponent'

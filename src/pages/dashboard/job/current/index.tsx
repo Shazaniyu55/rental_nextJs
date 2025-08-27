@@ -1,5 +1,5 @@
 import SWReportsAccordion from "@/components/accordion/SWReportsAccordion";
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import InfoAlert from "@/components/alerts/Info";
 import LoadingAlert from "@/components/alerts/Loading";
 import ClientJobDetailsCard from "@/components/card/ClientJobDetailsCard";

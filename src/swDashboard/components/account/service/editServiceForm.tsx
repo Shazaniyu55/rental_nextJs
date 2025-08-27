@@ -13,7 +13,7 @@ import { FormControls, FormParams, createFormObject } from "@/lib/form";
 import { createSetFromArray, fetchTalents } from "@/lib/search";
 import { AlertColor } from "@mui/material";
 import SnackbarComponent from "@/components/snackbar/SnackBar";
-import ErrorAlert from "@/components/alerts/Error";
+import ErrorAlert from "@/components/alerts/error";
 import { updateSWExtra } from "@/store/slices/swExtraSlice";
 
 export default function EditServiceForm({ index }: { index: number }) {
@@ -24,7 +24,7 @@ export default function EditServiceForm({ index }: { index: number }) {
   const [loading, setLoading] = useState(false);
 
   //declare refs
-  const snackBarRef = useRef();
+  const snackBarRef = useRef(null);
   const {
     users: {
       user: { _id },

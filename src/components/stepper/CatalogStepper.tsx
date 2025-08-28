@@ -17,6 +17,7 @@ import { Typography } from "@mui/material";
 // import AddBottomNavigation from "../bottomNavigation/AddBottomNavigation";
 import LoadingAlert from "../alerts/Loading";
 import { SmnkErrorBoundary } from "@/pages/_app";
+import CatalogDisplayStepper from "./CatalogDisplayStepper";
 // import CatalogDisplayStepper from "./CatalogDisplayStepper";
 
 // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -77,7 +78,7 @@ function CatalogStepper() {
       p={2}
     >
       <Typography variant="h6">Catalogue</Typography>
-      {/* <CatalogDisplayStepper catalog={catalog} forClient={false} /> */}
+      <CatalogDisplayStepper catalog={catalog} forClient={false} />
     </Box>
   );
 }

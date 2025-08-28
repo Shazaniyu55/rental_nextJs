@@ -31,7 +31,7 @@ export default function Layout(props: { children: any }) {
                 color={theme.rent[1000]}
                 minHeight={"100vh"}
                 maxWidth={300}
-                bgcolor={"whitesmoke"}
+                bgcolor={"#eded8dff"}
               >
                 <DP />
 

@@ -162,7 +162,6 @@ export default function Home() {
             </CardContent>
           </Card>
         </Box>
-<CatalogStepper/>
 
       </main>
     </Layout>

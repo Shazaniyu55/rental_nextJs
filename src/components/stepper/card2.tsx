@@ -100,10 +100,10 @@ const card = {
  * ==============   Data (Cleaning Steps)   ================
  */
 const steps = [
-    ["📅 Book Your Cleaning", 200, 220],
-    ["📞 Confirm Appointment", 30, 50],
-    ["🧹 Our Team Arrives", 90, 110],
-    ["✨ Deep Cleaning", 150, 170],
+    ["📅 Explore our site", 200, 220],
+    ["🏡Find a Home", 30, 50],
+    ["🧹 Contact our Team ", 90, 110],
+    ["✨ Deep Inspection", 150, 170],
     ["✅ Final Inspection", 250, 270],
-    ["🏡 Enjoy Your Fresh Space", 300, 320]
+    ["📞 Confirm appointment", 300, 320]
 ];

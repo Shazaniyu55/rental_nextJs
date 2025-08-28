@@ -75,7 +75,7 @@ export default function NavDrawerLinks() {
           <ListItemText
             primary={
               <Typography variant="body2" color="primary">
-                About SMNK
+                About 
               </Typography>
             }
           />
@@ -141,24 +141,7 @@ export default function NavDrawerLinks() {
                 }
               />
             </ListItemButton>
-            <ListItemButton
-              selected={selectedIndex === 5}
-              onClick={(event) => {
-                handleListItemClick(event, 5);
-                router.push("/purpose");
-              }}
-            >
-              <ListItemIcon>
-                <ConfirmationNumberIcon sx={{ color: theme.rent[1000] }} />
-              </ListItemIcon>
-              <ListItemText
-                primary={
-                  <Typography variant="caption" color="primary">
-                    Purpose
-                  </Typography>
-                }
-              />
-            </ListItemButton>
+            
             <ListItemButton
               selected={selectedIndex === 6}
               onClick={(event) => {
@@ -172,7 +155,7 @@ export default function NavDrawerLinks() {
               <ListItemText
                 primary={
                   <Typography variant="caption" color="primary">
-                    Our Team
+                     Team
                   </Typography>
                 }
               />
@@ -213,7 +196,7 @@ export default function NavDrawerLinks() {
           <ListItemText
             primary={
               <Typography variant="body2" color="primary">
-                Jobs
+                Homes
               </Typography>
             }
           />

@@ -10,7 +10,8 @@ export default function Navbar(){
         
             <Grid container sx={{
                                     alignItems:'center',
-                                    justifyContent:'center'
+                                    justifyContent:'center',
+                                    
                                 }}  
             >
                  <Grid item xs={2}>

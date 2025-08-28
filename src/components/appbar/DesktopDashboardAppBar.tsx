@@ -14,6 +14,7 @@ export default function DesktopDashboardAppBar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          backgroundColor: '#000000',
         }}
       >
         <Grid container>
@@ -24,7 +25,6 @@ export default function DesktopDashboardAppBar() {
             alignItems={"center"}
             justifyContent={"flex-start"}
           >
-            <AppBarLogo />
           </Grid>
           <Grid
             item

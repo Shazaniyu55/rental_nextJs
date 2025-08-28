@@ -26,9 +26,9 @@ function TeamPage() {
           </Typography>
           <CEO />
           <Divider />
-          <Admin />
+          {/* <Admin /> */}
           <Divider />
-          <PRO />
+          {/* <PRO /> */}
         </Container>
       </main>
     </Layout>
@@ -42,29 +42,29 @@ export const CEO = () => {
         <CardMedia
           component="img"
           height="400"
-          image="/assets/smnk_ceo.jpg"
-          alt="IGWEONU, KENECHUKWU EMMANUEL - SMNK CEO"
+          image="/assets/niyu.jpg"
+          alt="GBADAMOSI SHAZANIYU KADIRI- RENTALS CEO"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            IGWEONU, KENECHUKWU EMMANUEL
+            GBADAMOSI SHAZANIYU KADIRI 
           </Typography>
           <Typography fontWeight={"bold"}>Bio:</Typography>
           <Typography variant="body2" color="text.secondary">
-            IGWEONU, KENECHUKWU EMMANUEL is the Chief Executive Officer and
-            Founder of SMNK. He graduated with a degree in ECONOMICS from
-            Anambra State University and the University of Nigeria, Nsukka where
-            he bagged an M.Sc. He has a special bias in Development Economics
-            and Innovation which explains why he has become a fine human
-            developer and motivator.
+            Gbadamosi Shazaniyu Kadiri is the Chief Executive Officer(CEO) of
+            Rentals. He is a graduate of physiology from the prestigious
+            Lagos State University. He is a seasoned Software
+            Developer and a Techpreneur with over 5 years experience in the
+            field. He is also a serial entrepreneur with interest in real estate
+            and agriculture.
           </Typography>
           <Typography fontWeight={"bold"} m={1}>
             Philosophy about Life:
           </Typography>
           <i>
             {" "}
-            We have to dare to dream, however frightening or big that dream may
-            prove to be.
+            Life is a journey with problems to solve, lessons to learn, but most
+            of all, experiences to enjoy.
           </i>
         </CardContent>
       </CardActionArea>

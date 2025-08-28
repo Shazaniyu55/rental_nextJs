@@ -108,7 +108,7 @@ export default function Layout(props: { children: any }) {
                   }}
                 >
                   <ListItemText
-                    primary={<Typography variant="body2">Our Team</Typography>}
+                    primary={<Typography variant="body2"> Team</Typography>}
                   />
                 </ListItemButton>
               </Box>
@@ -130,15 +130,11 @@ export default function Layout(props: { children: any }) {
               }}
             >
               <ListItemText
-                primary={<Typography variant="body2">Jobs</Typography>}
+                primary={<Typography variant="body2">Homes</Typography>}
               />
             </ListItemButton>
 
-            <ListItemButton sx={{ ml: 0 }} onClick={() => {}}>
-              <ListItemText
-                primary={<Typography variant="body2">Blog</Typography>}
-              />
-            </ListItemButton>
+           
           </List>
         </Box>
         {props.children}

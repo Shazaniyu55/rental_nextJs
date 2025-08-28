@@ -9,7 +9,7 @@ export default function DesktopHomeAppBar() {
   const router = useRouter();
   return (
     <Toolbar
-      sx={{ pt: 2, display: "flex", flexDirection: "column", bgcolor: "white" }}
+      sx={{ pt: 2, display: "flex", flexDirection: "column", bgcolor: "#000000" }}
     >
       <Grid container>
         <Grid

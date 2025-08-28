@@ -72,10 +72,10 @@ export function MenuBarLogo() {
         fontWeight={"bold"}
         fontSize={"2rem"}
       >
-        SMNK
+        Rentals
       </Typography>
       <Typography fontFamily={`'Bungee Spice', cursive`} fontSize={".5rem"}>
-        we connect,you collect
+        connecting you to your dream home
       </Typography>
     </Box>
   );

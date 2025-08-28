@@ -15,7 +15,7 @@ import { updatePageLoading } from "@/store/slices/userSlice";
 export default function HomeLogoutAppBar() {
   const router = useRouter();
   return (
-    <Toolbar sx={{ bgcolor: "white" }}>
+    <Toolbar sx={{ bgcolor: "#ffffffff" }}>
       <Grid container>
         <Grid
           item
@@ -60,7 +60,7 @@ export function AppBarLogo() {
         src="/assets/logo.png"
         width={70}
         height={70}
-        style={{ marginRight: ".5rem" }}
+        style={{ marginRight: ".5rem",  }}
         onClick={() => {
           dispatch(updatePageLoading(true));
           router.push("/");

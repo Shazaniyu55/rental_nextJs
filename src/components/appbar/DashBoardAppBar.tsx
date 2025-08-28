@@ -24,6 +24,7 @@ export default function DashBoardAppBar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          backgroundColor: '#000000',
         }}
       >
         <Grid container>
@@ -53,7 +54,6 @@ export default function DashBoardAppBar() {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <AppBarLogo />
           </Grid>
           <Grid
             item

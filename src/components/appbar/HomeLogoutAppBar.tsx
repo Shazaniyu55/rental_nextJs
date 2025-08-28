@@ -15,7 +15,7 @@ import { updatePageLoading } from "@/store/slices/userSlice";
 export default function HomeLogoutAppBar() {
   const router = useRouter();
   return (
-    <Toolbar sx={{ bgcolor: "#ffffffff" }}>
+    <Toolbar sx={{ bgcolor: "#000000ff" }}>
       <Grid container>
         <Grid
           item

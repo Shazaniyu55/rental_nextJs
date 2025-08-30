@@ -6,7 +6,7 @@ export default function ClientSearchBox() {
   return (
     <>
       <Box display={"flex"} alignItems={"center"} justifyContent={"center"}>
-        <SearchDrawer searchOption="Services" />
+        <SearchDrawer searchOption="Homes" />
       </Box>
     </>
   );

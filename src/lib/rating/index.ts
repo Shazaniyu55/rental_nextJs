@@ -17,7 +17,7 @@ export type Rating={
       if(userId){
               const res = await axios({
                   method:'POST',
-                  url:`${process.env.SMNK_URL}api/rating/sw/${userId}`
+                  url:`${process.env.RENTALS_URL}api/rating/sw/${userId}`
               })
               const data = await res.data
               setRating(data)

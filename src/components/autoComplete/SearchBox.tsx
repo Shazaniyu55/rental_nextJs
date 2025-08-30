@@ -10,7 +10,7 @@ import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { SmnkErrorBoundary, theme } from "@/pages/_app";
 
 export default function SearchBox() {
-  const [value, setValue] = React.useState("Jobs");
+  const [value, setValue] = React.useState("Homes");
   const [open, setOpen] = React.useState(false);
   return (
     <SmnkErrorBoundary>
@@ -21,7 +21,7 @@ export default function SearchBox() {
         justifyContent={"center"}
       >
         <SearchDrawer searchOption={value} />
-        <List>
+        {/* <List>
           <ListItemButton
             sx={{ ml: 0 }}
             onClick={() => {
@@ -29,7 +29,7 @@ export default function SearchBox() {
             }}
           >
             <ListItemText
-              primary={<Typography variant="body2">Jobs</Typography>}
+              primary={<Typography variant="body2">Home</Typography>}
             />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
@@ -46,27 +46,27 @@ export default function SearchBox() {
             >
               <ListItemButton
                 onClick={(event) => {
-                  setValue("Jobs");
+                  setValue("Homes");
                   setOpen(false);
                 }}
               >
                 <ListItemText
-                  primary={<Typography variant="body2">Jobs</Typography>}
+                  primary={<Typography variant="body2">All homes</Typography>}
                 />
               </ListItemButton>
               <ListItemButton
                 onClick={(event) => {
-                  setValue("Services");
+                  setValue("Homes");
                   setOpen(false);
                 }}
               >
                 <ListItemText
-                  primary={<Typography variant="body2">Services</Typography>}
+                  primary={<Typography variant="body2">Categories</Typography>}
                 />
               </ListItemButton>
             </Box>
           </Collapse>
-        </List>
+        </List> */}
       </Box>
     </SmnkErrorBoundary>
   );

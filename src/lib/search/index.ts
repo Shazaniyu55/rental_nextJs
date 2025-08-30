@@ -135,3 +135,46 @@ export const createSetFromArray = (data:any[]):string[]=>{
   }
   return data
 }
+
+// export const fetchHome = async () => {
+//   try {
+//     const res = await axios({
+//       method: "GET",
+//       url: `${process.env.RENTALS_URL}api/talents`,
+//     });
+//     const data = await res.data;
+//     console.log(data);
+//     return data;
+//   } catch (err: any) {
+//     console.log(err);
+//     return err;
+//   }
+// };
+
+// lib/api.ts
+export async function fetchHome() {
+  try {
+    const res = await fetch("/api/houses", { cache: "no-store" });
+    const data = await res.json();
+
+    // Normalize → always return an array
+    return Array.isArray(data) ? data : data?.houses || [];
+  } catch (error) {
+    console.error("Error fetching houses:", error);
+    return [];
+  }
+}
+
+
+// fetch homes by category
+export const fetchSearchHomes = async (category: string) => {
+  try {
+    const res = await axios.get(
+      `${process.env.RENTALS_URL}api/houses?category=${category}`
+    );
+    return res.data;
+  } catch (err: any) {
+    console.error("Error searching homes", err);
+    return [];
+  }
+};

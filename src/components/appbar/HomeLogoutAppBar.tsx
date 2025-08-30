@@ -11,13 +11,14 @@ import DashboardDp from "../avatar/DashboardDp";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 import { updatePageLoading } from "@/store/slices/userSlice";
+import SearchBox from "../autoComplete/SearchBox";
 
 export default function HomeLogoutAppBar() {
   const router = useRouter();
   return (
-    <Toolbar sx={{ bgcolor: "#000000ff" }}>
+    <Toolbar sx={{ bgcolor: "#fffefeff" }}>
       <Grid container>
-        <Grid
+        {/* <Grid
           item
           xs={2}
           display={"flex"}
@@ -25,16 +26,16 @@ export default function HomeLogoutAppBar() {
           justifyContent={"flex-start"}
         >
           <AppBarLogo />
-        </Grid>
-        {/* <Grid
+        </Grid> */}
+        <Grid
           item
-          xs={1}
+          xs={2}
           display={"flex"}
           alignItems={"center"}
           justifyContent={"flex-end"}
         >
-          <SearchDrawer footer={false} />
-        </Grid> */}
+          <SearchBox/>
+        </Grid>
 
         <Grid
           item

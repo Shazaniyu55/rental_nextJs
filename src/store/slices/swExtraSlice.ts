@@ -13,7 +13,7 @@ export const getSWExtra = createAsyncThunk(
     try {
       const res = await axios({
         method: "GET",
-        url: `${process.env.SMNK_URL}api/users/swExtra/${userId}`,
+        url: `${process.env.RENTALS_URL}api/users/swExtra/${userId}`,
       });
       const data = await res.data;
       return data;

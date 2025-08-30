@@ -27,7 +27,7 @@ export default function HouseDetailsAccordion({ houses }: { houses: House }) {
     <Accordion sx={{ borderRadius: "12px", mb: 2 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography sx={{ fontWeight: "bold" }}>
-          {houses.title} - {houses.location} - ${houses.price}
+          {houses.details.title} - {houses.details.description} -{houses.details.price}$
         </Typography>
       </AccordionSummary>
       <AccordionDetails>

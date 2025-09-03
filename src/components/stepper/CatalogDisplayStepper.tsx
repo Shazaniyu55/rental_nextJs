@@ -42,7 +42,7 @@ function CatalogDisplayStepper({
     <SmnkErrorBoundary>
       <Box
         p={1}
-        bgcolor={"#000000"}
+        bgcolor={"#d12222ff"}
         maxWidth={"100%"}
         minWidth={"100%"}
         display={"flex"}
@@ -76,6 +76,8 @@ function CatalogDisplayStepper({
                 alt={cat.title}
                 src={`/api/multer/catalog/${cat.filename}`}
               />
+
+          
             </Box>
           ))}
       </Box>

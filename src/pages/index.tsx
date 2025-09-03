@@ -11,6 +11,7 @@ import HomePageStepper from "@/components/stepper/HomePageStepper";
 import { Cancel } from "@mui/icons-material";
 import CatalogStepper from "@/components/stepper/CatalogStepper";
 import ScrollTriggered from "@/components/stepper/card2";
+import CatalogDisplayStepper from "@/components/stepper/CatalogDisplayStepper";
 
 
 const geistSans = Geist({
@@ -162,7 +163,8 @@ export default function Home() {
             </CardContent>
           </Card>
         </Box>
-
+{/* <CatalogDisplayStepper forClient={false} catalog={[]}/> */}
+<CatalogStepper/>
       </main>
     </Layout>
   );

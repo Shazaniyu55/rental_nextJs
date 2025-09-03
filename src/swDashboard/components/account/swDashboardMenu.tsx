@@ -133,7 +133,7 @@ export default function SWDashboardMenu() {
         </List>
       </Collapse>
       <Divider />
-      <ListItemButton sx={{ ml: 0 }} onClick={jobHandleClick}>
+      {/* <ListItemButton sx={{ ml: 0 }} onClick={jobHandleClick}>
         <ListItemIcon>
           <WorkHistoryIcon sx={{ color: theme.rent[1000] }} />
         </ListItemIcon>
@@ -175,7 +175,7 @@ export default function SWDashboardMenu() {
           </ListItemButton>
         </List>
         <Divider />
-      </Collapse>
+      </Collapse> */}
       <WalletLink />
       <LiveChat /> <Divider />
       <Box ml={2}> {_id && <LogoutSwitch />}</Box>

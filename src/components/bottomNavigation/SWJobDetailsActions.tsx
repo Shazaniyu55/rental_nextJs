@@ -222,43 +222,28 @@ function StartJobTandC() {
         THINGS YOU NEED TO KNOW BEFORE YOU PROCEED
       </Typography>
       <Typography>
-        You are submitting a proposal for a physical or online job, and while
-        jobs are often completed without hassle, please keep these few points in
-        mind:
+        You are agree or not to the following terms and conditions by clicking
       </Typography>
       <ol>
         <li>
-          If it is a physical job, evidence of completed work is expected.
-          Always ensure you keep as much evidence as possible in case of a
-          dispute. This evidence can be in the form of pictures or short videos.
+          {/*  */}
         </li>
         <li>
-          Clients are expected to make payment before the job commences. You
-          should only accept a job once a client has made payment. Do not start
-          any job before receiving payment.
+         
         </li>
         <li>
           {" "}
-          You will only receive payment for a job, upon completion and
-          approval by the client.
+      
         </li>
         <li>
-          {" "}
-          In the event of a client&#39;s refusal to accept a completed job, SMNK
-          offers mediation services as long as there is evidence of a job well
-          done, and all transactions are conducted on the SMNK platform.
+         
         </li>
         <li>
-          {" "}
-          Do not accept or take jobs outside the platform, as any issues that
-          may arise later as a result of this will not be addressed by SMNK.
+         
         </li>
       </ol>
       <Typography>
-        Please choose physical jobs carefully and report any suspicious activity
-        to the SMNK team by directly messaging an admin or sending an email to
-        info@smnklimited.com. Click I AGREE to continue or I DISAGREE to decline
-        the job offer.
+       
       </Typography>
     </Box>
   );

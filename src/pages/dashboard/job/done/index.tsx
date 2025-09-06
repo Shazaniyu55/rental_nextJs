@@ -19,7 +19,7 @@ function DoneJobsPage() {
         if (_id) {
           const res = await axios({
             method: "POST",
-            url: `${process.env.SMNK_URL}api/job/done/${_id}`,
+            url: `${process.env.RENTALS_URL}api/job/done/${_id}`,
           });
           const data = await res.data;
           setJobs(data);

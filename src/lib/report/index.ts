@@ -14,7 +14,7 @@ export type ReportDetails={
     try{
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/report/read-report`,
+                    url:`${process.env.RENTALS_URL}api/report/read-report`,
                     data:{jobId,reportId}
                 })
                
@@ -29,7 +29,7 @@ export const readCorrection = async (jobId:string,reportId:string)=>{
   try{
               const res = await axios({
                   method:'POST',
-                  url:`${process.env.SMNK_URL}api/report/read-correction`,
+                  url:`${process.env.RENTALS_URL}api/report/read-correction`,
                   data:{jobId,reportId}
               })
              

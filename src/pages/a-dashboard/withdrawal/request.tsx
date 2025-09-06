@@ -65,7 +65,7 @@ function RequestComponent({ request }: { request: Request }) {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/a-dashboard/withdrawal/confirm-payment`,
+        url: `${process.env.RENTALS_URL}api/a-dashboard/withdrawal/confirm-payment`,
         data: { withdrawalId: request._id ?? "" },
       });
       const data = await res.data;

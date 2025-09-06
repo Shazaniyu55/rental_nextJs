@@ -27,7 +27,7 @@ function RatingForm({ jobId }: { jobId: string }) {
       if (values.raterId && values.jobId) {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/rating/rate`,
+          url: `${process.env.RENTALS_URL}api/rating/rate`,
           data: { values, type: user.type },
         });
         const data = await res.data;

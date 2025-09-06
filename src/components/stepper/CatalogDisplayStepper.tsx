@@ -59,27 +59,56 @@ function CatalogDisplayStepper({
           />
         )}
         {catalog &&
-          catalog.length > 0 &&
-          catalog.map((cat: Cat) => (
-            <Box
-              key={cat.filename}
-              onClick={() => {
-                const refState = imageDialogRef.current as any;
-                refState.updateSrc(`/api/multer/catalog/${cat.filename}`);
-                refState.showDialog();
-              }}
-            >
-              <BlackImageFrame
-                borderColor={theme.rent[1200]}
-                width={70}
-                height={70}
-                alt={cat.title}
-                src={`/api/multer/catalog/${cat.filename}`}
-              />
+  catalog.length > 0 &&
+  catalog.map((cat: Cat) => (
+    <Box
+      key={cat.filename}
+      onClick={() => {
+        const refState = imageDialogRef.current as any;
+        refState.updateSrc(`/api/multer/catalog/${cat.filename}`);
+        refState.showDialog();
+      }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        width: 100, // adjust as needed
+        m: 1,
+        cursor: "pointer",
+      }}
+    >
+      <BlackImageFrame
+        borderColor={theme.rent[1200]}
+        width={70}
+        height={70}
+        alt={cat.title}
+        src={`/api/multer/catalog/${cat.filename}`}
+      />
 
-          
-            </Box>
-          ))}
+      {/* ✅ Title */}
+      <Typography
+        variant="body2"
+        fontWeight="bold"
+        textAlign="center"
+        mt={0.5}
+        noWrap
+      >
+        {cat.title}
+      </Typography>
+
+      {/* ✅ Description */}
+      <Typography
+        variant="caption"
+        color="text.secondary"
+        textAlign="center"
+        noWrap
+      >
+        {cat.description}
+      </Typography>
+    </Box>
+  ))}
+
       </Box>
       <ViewOnlyImageDialog ref={imageDialogRef} />
     </SmnkErrorBoundary>

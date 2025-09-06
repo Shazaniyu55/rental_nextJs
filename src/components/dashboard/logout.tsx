@@ -17,7 +17,7 @@ export default function Logout() {
         sx={{
           textTransform: "capitalize",
           color: "white",
-          bgcolor: theme.smnk[1000],
+          bgcolor: theme.rent[1000],
         }}
         variant="outlined"
         size="small"

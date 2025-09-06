@@ -7,7 +7,7 @@ export default async function handler(req:any,res:any){
     //get database connection
     await dbConnect()
         try{
-            const users = await User.find({type:'skilled worker'})
+            const users = await User.find({type:'agent'})
                 res.status(201).json(users)
         }catch(err){
             console.log(err)

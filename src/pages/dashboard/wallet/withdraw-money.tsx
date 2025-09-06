@@ -78,7 +78,7 @@ export default function WithdrawalPage() {
           try {
             const result = await axios({
               method: "POST",
-              url: `${process.env.SMNK_URL}api/wallet/withdraw`,
+              url: `${process.env.RENTALS_URL}api/wallet/withdraw`,
               data: values,
             });
             const data = await result.data;

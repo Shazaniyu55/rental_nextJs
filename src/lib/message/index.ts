@@ -14,7 +14,7 @@ export type Message={
         if(values.senderId && values.receiverId){
                 const res = await axios({
                     method:'POST',
-                    url:`${process.env.SMNK_URL}api/message/send`,
+                    url:`${process.env.RENTALS_URL}api/message/send`,
                     data:values
                 })
                 const data = await res.data
@@ -39,7 +39,7 @@ export const unreadMessagesCount = async (receiverId:string)=>{
       if(receiverId){
               const res = await axios({
                   method:'GET',
-                  url:`${process.env.SMNK_URL}api/message/${receiverId}`,
+                  url:`${process.env.RENTALS_URL}api/message/${receiverId}`,
               })
               const data = await res.data
              return data
@@ -59,7 +59,7 @@ export const allMessages = async (receiverId:string)=>{
       if(receiverId){
               const res = await axios({
                   method:'POST',
-                  url:`${process.env.SMNK_URL}api/message/all-messages`,
+                  url:`${process.env.RENTALS_URL}api/message/all-messages`,
                   data:{receiverId}
               })
               const data = await res.data

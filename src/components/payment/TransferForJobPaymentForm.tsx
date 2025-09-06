@@ -42,7 +42,7 @@ function TransferForJobPaymentForm({ jobId }: { jobId: string }) {
 
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}/api/multer/pop`,
+          url: `${process.env.RENTALS_URL}/api/multer/pop`,
           data: formData,
         });
         const data = await res.data;

@@ -17,7 +17,7 @@ function UserRating({
   return (
     <SmnkErrorBoundary>
       <Badge
-        badgeContent={type === "skilled worker" && <Level level={level} />}
+        badgeContent={type === "agent" && <Level level={level} />}
         sx={{ m: 2 }}
       >
         <Rating name="read-only" value={rating} readOnly size="small" />

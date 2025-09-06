@@ -5,7 +5,7 @@ export const getAllSkilledWorkers = ()=>{
         try{
             const res = await axios({
                   method:'GET',
-                  url:`${process.env.SMNK_URL}api/sw`
+                  url:`${process.env.RENTALS_URL}api/sw`
               })
             const data = await res.data
            return data
@@ -22,7 +22,7 @@ export const getAllSkilledWorkers = ()=>{
         try{
             const res = await axios({
                   method:'GET',
-                  url:`${process.env.SMNK_URL}api/a-dashboard/admins`
+                  url:`${process.env.RENTALS_URL}api/a-dashboard/admins`
               })
             const data = await res.data
            return data
@@ -40,7 +40,7 @@ export const getAllSkilledWorkers = ()=>{
           if(userId){
             const res = await axios({
                 method:'POST',
-                url:`${process.env.SMNK_URL}api/sw/sub`,
+                url:`${process.env.RENTALS_URL}api/sw/sub`,
                 data:{userId}
             })
             const data = await res.data

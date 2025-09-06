@@ -20,7 +20,7 @@ function NotificationForm() {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/a-dashboard/notification/create`,
+        url: `${process.env.RENTALS_URL}api/a-dashboard/notification/create`,
         data: values,
       });
       const data = await res.data;

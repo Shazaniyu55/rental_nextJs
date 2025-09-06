@@ -17,7 +17,7 @@ export const getAllComplaints = async(jobId:string)=>{
       try{
         const res = await axios({
               method:'GET',
-              url:`${process.env.SMNK_URL}api/complaint/${jobId}`
+              url:`${process.env.RENTALS_URL}api/complaint/${jobId}`
           })
          data = await res.data
         

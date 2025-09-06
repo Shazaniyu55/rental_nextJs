@@ -61,7 +61,7 @@ export default function ClientReportDetailsAccordion({
       try {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/c-dashboard/job/approve-job`,
+          url: `${process.env.RENTALS_URL}api/c-dashboard/job/approve-job`,
           data: { jobId },
         });
         const data = await res.data;

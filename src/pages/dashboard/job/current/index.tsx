@@ -21,7 +21,7 @@ function CurrentJobPage() {
       try {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/job/current-job/${_id}`,
+          url: `${process.env.RENTALS_URL}api/job/current-job/${_id}`,
         });
         const data = await res.data;
         setJob(data);

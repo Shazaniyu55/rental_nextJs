@@ -31,9 +31,9 @@ function HomeNotification() {
           <ListItemIcon>
             <Badge color="error" variant="dot">
               {true ? (
-                <NotificationsActiveIcon sx={{ color: theme.smnk[1000] }} />
+                <NotificationsActiveIcon sx={{ color: theme.rent[1000] }} />
               ) : (
-                <NotificationsIcon sx={{ color: theme.smnk[1000] }} />
+                <NotificationsIcon sx={{ color: theme.rent[1000] }} />
               )}
             </Badge>
           </ListItemIcon>

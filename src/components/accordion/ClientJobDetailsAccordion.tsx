@@ -95,7 +95,7 @@ export default function ClientJobDetailsAccordion({ job }: { job: any }) {
 // ✅ Fetch recommended professionals only on client side
 const getRecommendedProfessionals = async (jobId: string) => {
   try {
-    const res = await axios.post(`${process.env.SMNK_URL}api/job/recommended-professionals`, { jobId });
+    const res = await axios.post(`${process.env.RENTALS_URL}api/job/recommended-professionals`, { jobId });
     return res.data;
   } catch (err: any) {
     console.log(err);

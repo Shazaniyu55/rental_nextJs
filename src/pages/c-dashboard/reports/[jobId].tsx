@@ -19,7 +19,7 @@ function JobReportsPage() {
                 try{
                     const res = await axios({
                           method:'GET',
-                          url:`${process.env.SMNK_URL}api/report/${id}`
+                          url:`${process.env.RENTALS_URL}api/report/${id}`
                       })
                     const data = await res.data
                    setReports(data)

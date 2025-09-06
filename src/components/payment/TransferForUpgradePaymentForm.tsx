@@ -56,7 +56,7 @@ function TransferForUpgradePaymentForm({
         );
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}/api/multer/sub`,
+          url: `${process.env.RENTALS_URL}/api/multer/sub`,
           data: formData,
         });
         const data = await res.data;

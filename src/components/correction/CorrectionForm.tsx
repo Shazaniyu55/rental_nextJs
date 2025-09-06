@@ -33,7 +33,7 @@ function CorrectionForm({
       if (values.reportId && values.jobId) {
         const res = await axios({
           method: "POST",
-          url: `${process.env.SMNK_URL}api/correction/make-correction`,
+          url: `${process.env.RENTALS_URL}api/correction/make-correction`,
           data: values,
         });
         const data = await res.data;

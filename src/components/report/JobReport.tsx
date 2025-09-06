@@ -21,7 +21,7 @@ function JobReportForm({ jobId, url }: { jobId: string; url: string }) {
     try {
       const res = await axios({
         method: "POST",
-        url: `${process.env.SMNK_URL}api/report/create-report`,
+        url: `${process.env.RENTALS_URL}api/report/create-report`,
         data: values,
       });
       const data = await res.data;
